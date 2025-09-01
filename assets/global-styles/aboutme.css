@@ -1,0 +1,303 @@
+@import url('../../utils/variables.css');
+
+/* main page container - centered content */
+.aboutme-main {
+    width: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--color-dark-bg);
+    position: relative;
+}
+
+.aboutme-section {
+    position: relative;
+    width: 100%;
+    max-width: 2000px;
+}
+
+/* nav bar tweaks for dark theme */
+.aboutme-main .main-navigation {
+    background-color: var(--color-glass-navbar);
+    position: fixed;
+    top: var(--space-md);
+    right: 80px;
+    left: auto;
+    transform: rotate(180deg);
+    z-index: 1000;
+}
+
+.aboutme-main .nav-link {
+    color: var(--color-dark-text);
+}
+
+.aboutme-main .nav-link:hover,
+.aboutme-main .nav-link.active {
+    background: var(--color-dark-text);
+    color: var(--color-dark-bg);
+    /* flip colors on interact */
+}
+
+@media (max-width: 767px) {
+    .aboutme-main .main-navigation {
+        top: var(--space-md);
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%) rotate(180deg);
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+        width: calc(100vw - 10px);
+        max-width: 100%;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 380px) {
+    .aboutme-main .main-navigation {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        gap: 5px;
+        transform: translateX(-50%) rotate(180deg);
+        width: 200px;
+    }
+
+    .aboutme-main .nav-link {
+        transform: none;
+        width: 120px;
+        text-align: center;
+        font-size: 16px;
+        padding-top: 0;
+        padding-right: 8px;
+        padding-bottom: 0;
+        padding-left: 8px;
+    }
+}
+
+/* main layout - side by side on desktop, stacked when tight on space */
+.aboutme-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    /* prevent wrapping */
+    padding: 120px 40px;
+    gap: 40px;
+}
+
+/* when screen gets narrow */
+@media (max-width: 1600px) {
+    .aboutme-content {
+        flex-direction: column;
+        align-items: flex-start;
+        /* keep content left-aligned when stacked */
+        gap: 60px;
+    }
+
+    .image-container {
+        max-width: 380px;
+        align-self: center;
+    }
+
+    .left-content {
+        max-width: 100%;
+    }
+}
+
+/* text content */
+.left-content {
+    flex: 1 1 400px;
+    max-width: 650px;
+    min-width: 400px;
+}
+
+/* big title */
+.aboutme-title {
+    font-family: var(--font-primary);
+    color: var(--color-dark-text);
+    font-size: var(--text-size-title);
+    line-height: 1;
+    margin: 0 0 var(--space-sm) 0;
+}
+
+/* subtitle with gradient text to match photo frame */
+.aboutme-subtitle {
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    background: var(--gradient-red-horizontal);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--color-dark-text-secondary);
+    font-size: var(--text-size-subtitle);
+    margin: 0;
+}
+
+/* main paragraph */
+.aboutme-paragraph {
+    font-family: var(--font-secondary);
+    color: var(--color-dark-text-primary);
+    font-size: var(--text-size-body);
+    line-height: 1.6;
+    margin: 0 0 var(--space-lg) 0;
+}
+
+/* glass cards with glass borders */
+.cards-container {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: nowrap;
+
+}
+
+/* individual cards */
+.info-card {
+    background-color: var(--color-glass-card);
+    border-radius: var(--radius-panel);
+    padding: var(--space-md);
+    flex: 0 0 auto;
+    width: var(--size-card-square);
+    height: var(--size-card-square);
+    position: relative;
+    z-index: 1;
+}
+
+/* gradient border effect */
+.info-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: var(--gradient-glass-border-dark);
+    border-radius: calc(var(--radius-panel) + 2px);
+    z-index: -1;
+}
+
+/* solid background to create border effect */
+.info-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-dark-surface);
+    border-radius: var(--radius-panel);
+    z-index: -1;
+}
+
+.card-title {
+    font-family: "Maven Pro", sans-serif;
+    font-weight: 700;
+    color: var(--color-dark-text);
+    font-size: 20px;
+    margin: 0 0 var(--space-sm) 0;
+}
+
+.card-text {
+    font-family: "Maven Pro", sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* photo with gradient frame */
+.image-container {
+    flex: 0 0 auto;
+    max-width: 450px;
+    padding: 5px;
+    background: var(--gradient-red-vertical);
+    border-radius: calc(var(--radius-panel) + 5px);
+    transform: rotate(-5deg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.aboutme-image {
+    max-width: 100%;
+    /* scale to container */
+    height: auto;
+    /* maintain aspect ratio */
+    object-fit: cover;
+    /* crop image nicely */
+    object-position: center;
+    border-radius: var(--radius-panel);
+    display: block;
+}
+
+/* mobile responsive - everything stacks vertically */
+@media (max-width: 768px) {
+    .aboutme-content {
+        flex-direction: column;
+        align-items: flex-start;
+        /* back to flex-start for mobile stacking */
+        padding: 100px var(--space-md) var(--space-md) var(--space-md);
+        gap: 40px;
+    }
+
+    .left-content {
+        max-width: 100%;
+        /* take full width */
+        text-align: center;
+        /* center text on mobile */
+    }
+
+    /* smaller text for mobile screens */
+    .aboutme-title {
+        font-size: 48px;
+    }
+
+    .aboutme-subtitle {
+        font-size: 20px;
+    }
+
+    .aboutme-paragraph {
+        font-size: 16px;
+    }
+
+    /* stack cards vertically */
+    .cards-container {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    /* center image and make it smaller */
+    .image-container {
+        transform: rotate(-3deg);
+        /* less tilt on mobile */
+        align-self: center;
+    }
+
+    .aboutme-image {
+        height: 50vh;
+        /* bigger on mobile - was 40vh */
+        max-width: 380px;
+        /* bigger mobile max width */
+        min-width: 280px;
+        /* bigger mobile min width */
+        max-height: 60vh;
+        /* bigger mobile max height */
+        min-height: 320px;
+        /* bigger minimum mobile size */
+    }
+
+    /* cards stay same size but centered */
+    .info-card {
+        margin: 0 auto;
+    }
+
+    /* slightly smaller card text */
+    .card-title {
+        font-size: 18px;
+    }
+
+    .card-text {
+        font-size: 14px;
+    }
+}
