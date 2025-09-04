@@ -1,158 +1,158 @@
 :root {
-  /* COLOR SCHEME */
-  
-  /* accent colors */
-  --color-accent-red: #FF3333;
-  --color-accent-red-dark: #990000;
-  --color-accent-purple: #9933FF;
-  --color-accent-purple-dark: #4D0099;
-  --color-accent-green: #33FF33;
-  --color-accent-green-dark: #009900;
-  --color-accent-blue: #3366FF;
-  --color-accent-blue-dark: #002099;
-  
-  /* dark theme colors */
-  --color-dark-bg: #000000;
-  --color-dark-surface: #0f0f0f;
-  --color-dark-text: #ffffff;
-  --color-dark-text-secondary: rgba(255, 255, 255, 0.8);
-  --color-dark-text-primary: rgba(255, 255, 255, 0.9);
-  
-  /* light theme colors */
-  --color-light-bg: #ffffff;
-  --color-light-surface: rgba(246, 246, 246, 0.7);
-  --color-light-border-panel: rgba(202, 202, 202, 0.7);
-  --color-light-border-button: rgba(233, 233, 233, 0.7);
-  --color-light-text: #000000;
-  
-  /* glass/transparents */
-  --color-glass-card: rgba(255, 255, 255, 0.1);
-  --color-glass-navbar: rgba(255, 255, 255, 0.3);
-  --color-glass-bg: rgba(255, 255, 255, 0.1);
-  --color-glass-border: rgba(255, 255, 255, 0.2);
-  --color-card-bg: rgba(255, 255, 255, 0.05);
-  --color-text-white: #ffffff;
-  --color-primary: #ffffff;
-  
-  /* container sizes */
-  --size-container-max: 2064px;
-  --size-container-contact-max: 2000px;
-  --size-content-max-width: 650px;
-  --size-content-min-width: 400px;
-  --size-paragraph-max-width: 500px;
-  
-  /* component sizes */
-  --size-nav-height: 60px;
-  --size-nav-button-min: 80px;
-  --size-nav-position-right: 80px;
-  --size-card-square: 300px;
-  --size-social-button: 100px;
-  --size-social-button-small: 85px;
-  --size-social-button-contact: 140px;
-  --size-social-button-contact-height: 50px;
-  --size-social-icon-contact: 28px;
-  --size-icon: 50px;
-  --size-nav: 26px;
-  --nav-height: 60px;
-  --card-size: 300px;
-  --size-profile-image: 700px;
-  --size-subtitle-width: 324px;
-  --size-social-panel-width: 521px;
-  --size-social-button-width: 102px;
-  --size-social-button-height: 101px;
-  
-  /* layout spacing */
-  
-  /* === TYPOGRAPHY === */
-  
-  /* font families */
-  --font-primary: "Bebas Neue", sans-serif;
-  --font-secondary: "Maven Pro", sans-serif;
-  
-  /* font sizes - standardized scale */
-  --text-size-hero: 148px;        /* Hero/display text */
-  --text-size-xl: 72px;           /* Main titles */
-  --text-size-lg: 64px;           /* Large titles */
-  --text-size-nav: 26px;          /* Navigation (keep existing) */
-  --text-size-md: 24px;           /* Subtitles */
-  --text-size-base: 18px;         /* Body text, social titles */
-  --text-size-sm: 16px;           /* Navigation mobile, medium text */
-  --text-size-xs: 14px;           /* Buttons, small text */
-  --text-size-xxs: 13px;          /* Very small text, captions */
-  
-  /* line heights */
-  --line-height-hero: 112px;
-  
-  /* font weights */
-  --font-weight-subtitle: 700;
-  
-  /* shared subtitle styles */
-  --subtitle-font-family: var(--font-secondary);
-  --subtitle-font-size: var(--text-size-md);
-  --subtitle-font-weight: var(--font-weight-subtitle);
-  --subtitle-margin: 0 0 var(--space-md) 0;
-  
-  /* spacing */
-  --space-xs: 5px;
-  --space-sm: 10px;
-  --space-md: 20px;
-  --space-lg: 40px;
-  --space-xl: 80px;
-  --space-xxl: 120px;
-  --space-word-clamp-min: -15px;
-  --space-word-clamp-max: 0px;
-  
-  /* letter spacing */
-  --letter-spacing-title: 2px;
-  
-  /* border radius */
-  --radius-panel: 20px;
-  --radius-button: 15px;
-  
-  /* shadows */
-  --shadow-main: 0 10px 30px rgba(0, 0, 0, 0.3);
-  --shadow-subtle: 0 4px 8px rgba(0, 0, 0, 0.1);
-  
-  /* GRADIENTS */
-  
-  --gradient-red-horizontal: linear-gradient(to right, #FF3333, #990000);
-  --gradient-red-vertical: linear-gradient(to bottom, #FF3333, #990000);
+    /* accent colors */
+    --color-accent-red: #FF3333;
+    --color-accent-red-dark: #990000;
+    --color-accent-purple: #9933FF;
+    --color-accent-purple-dark: #4D0099;
+    --color-accent-green: #33FF33;
+    --color-accent-green-dark: #009900;
+    --color-accent-blue: #3366FF;
+    --color-accent-blue-dark: #002099;
 
-  --gradient-purple-horizontal: linear-gradient(to right, #9933FF, #4D0099);
-  --gradient-purple-vertical: linear-gradient(to bottom, #9933FF, #4D0099);
-  
+    /* theme colors */
+    --color-dark-bg: #000000;
+    --color-dark-surface: #0f0f0f;
+    --color-dark-text: #ffffff;
+    --color-dark-text-secondary: rgba(255, 255, 255, 0.8);
+    --color-dark-text-primary: rgba(255, 255, 255, 0.9);
 
-  --gradient-green-horizontal: linear-gradient(to right, #33FF33, #009900);
-  --gradient-green-vertical: linear-gradient(to bottom, #33FF33, #009900);
-  
+    --color-light-bg: #ffffff;
+    --color-light-surface: rgba(246, 246, 246, 0.7);
+    --color-light-border-panel: rgba(202, 202, 202, 0.7);
+    --color-light-border-button: rgba(233, 233, 233, 0.7);
+    --color-light-text: #000000;
 
-  --gradient-blue-horizontal: linear-gradient(to right, #3366FF, #002099);
-  --gradient-blue-vertical: linear-gradient(to bottom, #3366FF, #002099);
-  
+    --color-text-white: #ffffff;
+    --color-primary: #ffffff;
 
-  --gradient-card-border: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.25) 0%,
-    rgba(255, 255, 255, 0.07) 50%,
-    rgba(255, 255, 255, 0.25) 100%
-  );
-  
-  
-  --gradient-glass-border-dark: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.25) 0%,
-    rgba(255, 255, 255, 0.07) 50%,
-    rgba(255, 255, 255, 0.25) 100%
-  );
-  
-  --gradient-glass-border-light: linear-gradient(135deg, 
-    #f0f0f0 0%,
-    #e0e0e0 50%,
-    #f0f0f0 100%
-  );
-  
-  --breakpoint-small: 768px;
-  --breakpoint-mobile: 767px;
-  --breakpoint-medium: 1600px;
-  
-  --min-screen-width: 320px;
-  --min-screen-height: 568px;
+    /* fonts and text */
+    --font-primary: "Bebas Neue", sans-serif;
+    --font-secondary: "Maven Pro", sans-serif;
+
+    --text-size-hero: 148px;
+    --text-size-xl: 72px;
+    --text-size-lg: 64px;
+    --text-size-nav: 26px;
+    --text-size-md: 24px;
+    --text-size-base: 18px;
+    --text-size-body: 18px;
+    --text-size-sm: 16px;
+    --text-size-xs: 14px;
+    --text-size-xxs: 13px;
+
+    --line-height-hero: 112px;
+    --font-weight-subtitle: 700;
+    --letter-spacing-title: 2px;
+
+    /* spacing stuff */
+    --space-xs: 5px;
+    --space-sm: 10px;
+    --space-md: 20px;
+    --space-lg: 40px;
+    --space-xl: 80px;
+    --space-xxl: 120px;
+    --space-word-clamp-min: -15px;
+    --space-word-clamp-max: 0px;
+
+    /* rounded corners */
+    --radius-panel: 20px;
+    --radius-button: 15px;
+
+    /* breakpoints */
+    --breakpoint-small: 768px;
+    --breakpoint-mobile: 767px;
+    --breakpoint-medium: 1600px;
+    --min-screen-width: 320px;
+    --min-screen-height: 568px;
+
+
+    /* nav bar stuff */
+
+    --nav-height: 60px;
+    --size-nav-height: 60px;
+    --size-nav-button-min: 80px;
+    --size-nav-position-right: 80px;
+    --size-nav: 26px;
+
+
+    /* the cards */
+
+    --card-size: 300px;
+    --size-card-square: 300px;
+
+
+    /* social buttons */
+
+    --size-social-button: 100px;
+    --size-social-button-small: 85px;
+    --size-social-button-contact: 140px;
+    --size-social-button-contact-height: 50px;
+    --size-social-icon-contact: 28px;
+    --size-social-panel-width: 521px;
+    --size-social-button-width: 102px;
+    --size-social-button-height: 101px;
+    --size-icon: 50px;
+
+    --layout-social-container-max: 500px;
+    --layout-social-links-max: 600px;
+
+
+    /* page layout */
+
+    /* container sizes */
+    --size-container-max: 2064px;
+    --size-container-contact-max: 2000px;
+    --size-content-max-width: 650px;
+    --size-content-min-width: 400px;
+    --size-paragraph-max-width: 500px;
+    --size-profile-image: 700px;
+    --size-subtitle-width: 324px;
+
+    /* layout stuff */
+    --layout-mobile-padding-top: 120px;
+    --layout-content-height-standard: 120px;
+    --layout-aboutme-paragraph-height: 322px;
+
+    /* shared styles */
+    --subtitle-font-family: var(--font-secondary);
+    --subtitle-font-size: var(--text-size-md);
+    --subtitle-font-weight: var(--font-weight-subtitle);
+    --subtitle-margin: 0 0 var(--space-md) 0;
+
+    /* glass and transparency */
+    --color-glass-card: rgba(255, 255, 255, 0.1);
+    --color-glass-navbar: rgba(255, 255, 255, 0.3);
+    --color-glass-navbar-dark: rgba(0, 0, 0, 0.7);
+    --color-glass-bg: rgba(255, 255, 255, 0.1);
+    --color-glass-border: rgba(255, 255, 255, 0.2);
+    --color-card-bg: rgba(255, 255, 255, 0.05);
+
+    /* shadows */
+    --shadow-main: 0 10px 30px rgba(0, 0, 0, 0.3);
+    --shadow-subtle: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    /* gradients */
+    --gradient-red-horizontal: linear-gradient(to right, #FF3333, #990000);
+    --gradient-red-vertical: linear-gradient(to bottom, #FF3333, #990000);
+    --gradient-purple-horizontal: linear-gradient(to right, #9933FF, #4D0099);
+    --gradient-purple-vertical: linear-gradient(to bottom, #9933FF, #4D0099);
+    --gradient-green-horizontal: linear-gradient(to right, #33FF33, #009900);
+    --gradient-green-vertical: linear-gradient(to bottom, #33FF33, #009900);
+    --gradient-blue-horizontal: linear-gradient(to right, #3366FF, #002099);
+    --gradient-blue-vertical: linear-gradient(to bottom, #3366FF, #002099);
+
+    --gradient-card-border: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.25) 0%,
+            rgba(255, 255, 255, 0.07) 50%,
+            rgba(255, 255, 255, 0.25) 100%);
+
+    --gradient-glass-border-dark: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.25) 0%,
+            rgba(255, 255, 255, 0.07) 50%,
+            rgba(255, 255, 255, 0.25) 100%);
+
+    --gradient-glass-border-light: linear-gradient(135deg,
+            #f0f0f0 0%,
+            #e0e0e0 50%,
+            #f0f0f0 100%);
 }

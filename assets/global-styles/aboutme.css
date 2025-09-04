@@ -1,6 +1,5 @@
 @import url('../../utils/variables.css');
 
-/* main page container - centered content */
 .aboutme-main {
     width: 100%;
     min-width: 100vw;
@@ -19,9 +18,9 @@
     max-width: 2000px;
 }
 
-/* nav bar tweaks for dark theme */
+/* dark */
 .aboutme-main .main-navigation {
-    background-color: var(--color-glass-navbar);
+    background-color: var(--color-glass-navbar-dark);
     position: fixed;
     top: var(--space-md);
     right: 80px;
@@ -38,11 +37,11 @@
 .aboutme-main .nav-link.active {
     background: var(--color-dark-text);
     color: var(--color-dark-bg);
-    /* flip colors on interact */
+    /* colour flip */
 }
 
+    /* breakpoint! */
 @media (max-width: 767px) {
-    /* mobile navigation - matches home page exactly */
     .aboutme-main .main-navigation {
         top: var(--space-md);
         left: 50%;
@@ -66,7 +65,6 @@
     }
 }
 
-/* main content layout - centered like contact page */
 .aboutme-content {
     display: flex;
     justify-content: center;
@@ -76,8 +74,7 @@
     gap: var(--space-xl);
 }
 
-/* content - main container matching contact page exactly */
-.content {
+.main-content {
     flex: 1 1 var(--size-content-min-width);
     max-width: var(--size-content-max-width);
     min-width: var(--size-content-min-width);
@@ -86,20 +83,17 @@
     flex-direction: column;
 }
 
-/* title section - centered like contact page */
 .title-section {
     text-align: center;
     flex-shrink: 0;
 }
 
-/* content area - fixed height wrapper to match contact page exactly */
 .content-area {
-    height: 300px; /* fixed height to contain paragraph + equivalent space as contact page social section */
+    height: 300px;
     position: relative;
     margin: 0 0 var(--space-lg) 0;
 }
 
-/* content container - positioned within content area */
 .content-container {
     position: relative;
     height: 100%;
@@ -107,47 +101,45 @@
     align-items: flex-start;
 }
 
-/* text content - positioned relative to center, offset left */
+/* offset left */
 .text-content {
-    max-width: var(--size-paragraph-max-width); /* 500px - proper text width constraint */
+    max-width: var(--size-paragraph-max-width); 
     text-align: left;
     position: absolute;
-    z-index: 2; /* above background image */
-    left: calc(50% - 150px); /* center minus 150px for left positioning */
+    z-index: 2; 
+    left: calc(50% - 150px); 
     top: 0;
-    margin: 0; /* reset margin since we're using absolute positioning */
+    margin: 0;
 }
 
-/* main paragraph - extended to fill space of both paragraph and social container */
-.aboutme-paragraph {
+.page-paragraph {
     font-family: var(--font-secondary);
     color: var(--color-dark-text-primary);
     font-size: var(--text-size-base);
     line-height: 1.6;
     margin: 0 auto var(--space-lg) auto;
     text-align: left;
-    max-width: 400px; /* reduced by 100px from 500px */
-    height: 322px; /* decreased by 3px from 325px for perfect alignment */
-    overflow: hidden; /* prevent text from extending beyond container */
-    transform: translateX(-150px); /* moved left by 50px (was -100px) */
+    max-width: 400px;
+    height: 322px;
+    overflow: hidden; 
+    transform: translateX(-150px);
 }
 
-/* image container - completely separate from layout, positioned relative to section */
+/* lots of lining up magic number type beats, dont touch unless its broke */
 .image-container {
     position: absolute;
-    top: 250px; /* moved down 50px from 200px */
-    left: calc(50% + 100px); /* moved left by 50px (was 150px, now 100px) */
+    top: 250px; 
+    left: calc(50% + 100px);
     width: 240px;
     height: auto;
-    z-index: 1; /* behind text content */
+    z-index: 1;
     padding: 5px;
     background: var(--gradient-red-vertical);
     border-radius: calc(var(--radius-panel) + 5px);
-    transform: translateX(-50%) rotate(-3deg); /* center and rotate */
+    transform: translateX(-50%) rotate(-4deg); 
     box-shadow: var(--shadow-main);
 }
 
-/* page title */
 .aboutme-title {
     font-family: var(--font-primary);
     color: var(--color-dark-text);
@@ -157,7 +149,6 @@
     letter-spacing: var(--letter-spacing-title);
 }
 
-/* subtitle with gradient text to match photo frame */
 .aboutme-subtitle {
     font-family: var(--subtitle-font-family);
     font-size: var(--subtitle-font-size);
@@ -170,14 +161,6 @@
     color: var(--color-dark-text-secondary);
 }
 
-/* empty container to mimic social panel spacing from contact page */
-.social-equivalent {
-    height: 120px; /* matches contact page social container height */
-    margin: var(--space-lg) auto; /* matches contact page social container margin (top and bottom) */
-    padding: var(--space-md); /* matches contact page social container padding */
-}
-
-/* glass cards with glass borders - centered */
 .cards-container {
     display: flex;
     gap: var(--space-md);
@@ -185,7 +168,6 @@
     justify-content: center;
 }
 
-/* individual cards */
 .info-card {
     background-color: var(--color-glass-card);
     border-radius: var(--radius-panel);
@@ -197,7 +179,6 @@
     z-index: 1;
 }
 
-/* gradient border effect */
 .info-card::before {
     content: '';
     position: absolute;
@@ -210,7 +191,6 @@
     z-index: -1;
 }
 
-/* solid background to create border effect */
 .info-card::after {
     content: '';
     position: absolute;
@@ -229,6 +209,7 @@
     color: var(--color-dark-text);
     font-size: 20px;
     margin: 0 0 var(--space-sm) 0;
+    text-align: left;
 }
 
 .card-text {
@@ -237,9 +218,10 @@
     font-size: 14px;
     line-height: 1.5;
     margin: 0;
+    text-align: left;
 }
 
-/* photo with gradient frame - positioned to the right */
+/* offset right - finnicky stuff again */
 .image-container {
     flex: 0 0 300px;
     max-width: 300px;
@@ -252,17 +234,15 @@
 
 .aboutme-image {
     max-width: 100%;
-    /* scale to container */
+    /* scale to !container! */
     height: auto;
-    /* maintain aspect ratio */
-    object-fit: cover;
-    /* crop image nicely */
+    /* keep aspect ratio */
     object-position: center;
     border-radius: var(--radius-panel);
     display: block;
 }
 
-/* mobile responsive - everything stacks vertically */
+/* stack vertically */
 @media (max-width: 767px) {
     .aboutme-content {
         flex-direction: column;
@@ -272,12 +252,13 @@
     }
 
     .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         max-width: 100%;
         min-width: auto;
-        text-align: center;
     }
 
-    /* mobile: text and image stack vertically */
     .content-container {
         position: static;
         min-height: auto;
@@ -287,30 +268,33 @@
         gap: var(--space-md);
     }
 
-    .text-content {
-        max-width: 100%;
-        text-align: center;
-        position: static;
-        margin-left: 0; /* reset desktop positioning */
-    }
-
-    /* mobile: image positioned normally below text */
     .image-container {
         position: static;
         width: 250px;
         max-width: 90%;
         align-self: center;
-        transform: rotate(-3deg);
+        margin: 0 auto var(--space-lg) auto; /* center with margin */
+        left: auto; 
+        top: auto; 
+        transform: translateX(0) rotate(-3deg);
+        order: 2; /* rearrange */
     }
 
-    /* stack cards vertically */
+    .page-paragraph {
+        transform: none;
+        text-align: left;
+        max-width: 90%; 
+        margin: 0 auto var(--space-lg) auto; 
+        order: 1; /* rearrange */
+    }
+
     .cards-container {
         flex-direction: column;
         align-items: center;
         gap: var(--space-sm);
+        order: 3; 
     }
 
-    /* cards stay same size but centered */
     .info-card {
         margin: 0;
         width: var(--size-card-square);

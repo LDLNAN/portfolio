@@ -1,301 +1,321 @@
 @import url('../../utils/variables.css');
 
+/* works dont change!!!  */
 /* main wrapper for everything */
 .portfolio-main {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: var(--color-light-bg);
-  position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--color-light-bg);
+    position: relative;
 }
 
 .portfolio-main .hero-section {
-  position: relative;
-  width: 100%;
-  max-width: 2063px;
-  height: 100vh;
+    position: relative;
+    width: 100%;
+    max-width: 2063px;
+    height: 100vh;
 }
 
 /* hero header area with the big title */
 .hero-header {
-  position: absolute;
-  bottom: 30%;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+    position: absolute;
+    bottom: 30%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 /* title wrapper with the blend mode effect */
 .title-container {
-  position: absolute;
-  left: calc(50% + 150px); /* shifts slight right */
-  transform: translateX(-50%); /* middle */
-  bottom: 0;  
-  z-index: 1000;
-  mix-blend-mode: difference;
-  display: flex;
-  flex-direction: column; /* on top of each other */
-  align-items: flex-start; /* left aligned flex*/
+    position: absolute;
+    left: calc(50% + 150px);
+    /* shifts slight right */
+    transform: translateX(-50%);
+    /* middle */
+    bottom: 0;
+    z-index: 1000;
+    mix-blend-mode: difference;
+    display: flex;
+    flex-direction: column;
+    /* on top of each other */
+    align-items: flex-start;
+    /* left aligned flex*/
 }
 
 /* big lucas donald */
 .hero-title {
-  margin: 0;
-  font-family: var(--font-primary);
-  font-weight: 400;
-  color: var(--color-dark-text);
-  font-size: var(--text-size-hero);
-  letter-spacing: -0.02em;
-  line-height: var(--line-height-hero);
-  word-spacing: clamp(var(--space-word-clamp-min), -1.5vw, var(--space-word-clamp-max));
+    margin: 0;
+    font-family: var(--font-primary);
+    font-weight: 400;
+    color: var(--color-dark-text);
+    font-size: var(--text-size-hero);
+    letter-spacing: -0.02em;
+    line-height: var(--line-height-hero);
+    word-spacing: clamp(var(--space-word-clamp-min), -1.5vw, var(--space-word-clamp-max));
 }
 
 /* wrapper for the social buttons so they line up nicely */
 .hero-center {
-  position: absolute;
-  bottom: 8%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: max-content;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 /* just another wrapper for the content */
 .content-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 /* beautiful */
 .profile-image {
-  position: absolute;
-  width: var(--size-profile-image);
-  height: 100vh; 
-  left: calc(50% - 150px); /* shifts it left more to create space from text | thank you AI */
-  transform: translateX(-50%); /* center */
-  object-fit: contain;
-  object-position: bottom;
-  z-index: 1; 
+    position: absolute;
+    width: var(--size-profile-image);
+    height: 100vh;
+    left: calc(50% - 150px);
+    /* shifts it left more to create space from text | thank you AI */
+    transform: translateX(-50%);
+    /* center */
+    object-fit: contain;
+    object-position: bottom;
+    z-index: 1;
 }
 
 /* nav bar - glass */
 .main-navigation {
-  width: auto;
-  height: var(--size-nav-height);
-  justify-content: flex-end;
-  position: fixed;
-  top: var(--space-md); 
-  right: 80px; 
-  left: auto;
-  transform: rotate(180deg); /* upside down otherwise?? */
-  display: flex;
-  align-items: center;
-  z-index: 1000;
-  background-color: var(--color-glass-navbar);
-  border-radius: var(--radius-panel);
+    width: auto;
+    height: var(--size-nav-height);
+    justify-content: flex-end;
+    position: fixed;
+    top: var(--space-md);
+    right: 80px;
+    left: auto;
+    transform: rotate(180deg);
+    /* upside down otherwise?? */
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    background-color: var(--color-glass-navbar);
+    border-radius: var(--radius-panel);
 }
 
 /* individual nav buttons */
 .nav-link {
-  min-width: var(--size-nav-button-min);
-  height: var(--size-nav-height);
-  padding-top: 0;
-  padding-right: var(--space-md);
-  padding-bottom: 0;
-  padding-left: var(--space-md);
-  transform: rotate(180deg);
-  font-family: var(--font-secondary);
-  font-weight: 700;
-  color: var(--color-dark-bg);
-  font-size: var(--text-size-nav);
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap; /* prevents breaking into multiple lines */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: var(--radius-button);
-  text-decoration: none; /* remove underlines */
+    min-width: var(--size-nav-button-min);
+    height: var(--size-nav-height);
+    padding-top: 0;
+    padding-right: var(--space-md);
+    padding-bottom: 0;
+    padding-left: var(--space-md);
+    transform: rotate(180deg);
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    color: var(--color-dark-bg);
+    font-size: var(--text-size-nav);
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    /* prevents breaking into multiple lines */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-button);
+    text-decoration: none;
+    /* remove underlines */
 }
 
 /* hover - black background with white text */
 .nav-link:hover {
-  background: var(--color-dark-bg);
-  color: var(--color-dark-text);
-  border-radius: var(--radius-button);
+    background: var(--color-dark-bg);
+    color: var(--color-dark-text);
+    border-radius: var(--radius-button);
 }
 
 /* active state - same as hover effect */
 .nav-link.active {
-  background: var(--color-dark-bg);
-  color: var(--color-dark-text);
-  border-radius: var(--radius-button);
+    background: var(--color-dark-bg);
+    color: var(--color-dark-text);
+    border-radius: var(--radius-button);
 }
 
 /* developer & music producer text */
 .hero-subtitle {
-  width: var(--size-subtitle-width);
-  margin: 0;
-  margin-top: -5px; 
-  margin-left: 4px;
-  mix-blend-mode: difference; 
-  font-family: "Maven Pro", sans-serif;
-  font-weight: 700;
-  color: var(--color-dark-text);
-  font-size: var(--text-size-subtitle);
-  line-height: normal;
+    width: var(--size-subtitle-width);
+    margin: 0;
+    margin-top: -5px;
+    margin-left: 4px;
+    mix-blend-mode: difference;
+    font-family: "Maven Pro", sans-serif;
+    font-weight: 700;
+    color: var(--color-dark-text);
+    font-size: var(--text-size-subtitle);
+    line-height: normal;
 }
 
 /* glass panel with all the social buttons */
 .social-links {
-  position: relative;
-  width: var(--size-social-panel-width);
-  height: var(--size-social-panel-height);
-  margin: 0;
-  z-index: 2;
-  background-color: var(--color-light-surface);
-  border-radius: var(--radius-panel);
-  border: 1px solid var(--color-light-border-panel); 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: var(--space-md);
-  padding-right: var(--space-md);
-  padding-bottom: var(--space-md);
-  padding-left: var(--space-md);
+    position: relative;
+    width: var(--size-social-panel-width);
+    height: var(--size-social-panel-height);
+    margin: 0;
+    z-index: 2;
+    background-color: var(--color-light-surface);
+    border-radius: var(--radius-panel);
+    border: 1px solid var(--color-light-border-panel);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: var(--space-md);
+    padding-right: var(--space-md);
+    padding-bottom: var(--space-md);
+    padding-left: var(--space-md);
 }
 
 /* each social media button */
 .social-link {
-  width: var(--size-social-button-width);
-  height: var(--size-social-button-height);
-  background-color: var(--color-light-surface);
-  border-radius: var(--radius-button);
-  border: 2px solid transparent;
-  background-image: 
-    linear-gradient(var(--color-light-surface), var(--color-light-surface)),
-    var(--gradient-glass-border-light);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  box-shadow: var(--shadow-glass);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  position: relative;
-  z-index: 1;
+    width: var(--size-social-button-width);
+    height: var(--size-social-button-height);
+    background-color: var(--color-light-surface);
+    border-radius: var(--radius-button);
+    border: 2px solid transparent;
+    background-image:
+        linear-gradient(var(--color-light-surface), var(--color-light-surface)),
+        var(--gradient-glass-border-light);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: var(--shadow-glass);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
 }
 
 /* remove the pseudo-elements since we're using a different technique */
 
 .social-link:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .social-icon {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
 }
 
 @media (max-width: 767px) {
-  /* mobile and tablet stuff */
-  .main-navigation {
-    top: var(--space-md);
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%) rotate(180deg);
-    flex-wrap: wrap;
-    gap: var(--space-sm);
-    width: calc(100vw - 10px); 
-    max-width: 100%; 
-    justify-content: center;
-    align-items: flex-start;
-  }
-  
-  .nav-link {
-    padding-top: 0;
-    padding-right: var(--space-sm);
-    padding-bottom: 0;
-    padding-left: var(--space-sm);
-    font-size: 16px;
-    width: fit-content;
-  }
-  
-  /* center everything */
-  .title-container {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .hero-center {
-    bottom: 8%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .profile-image {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .social-links {
-    width: 521px; /* keep it the same size */
-    left: 50%;
-    transform: translateX(-50%);
-    justify-content: center;
-    gap: 25px; /* more space between buttons on mobile */
-  }
 
-  .social-link {
-    width: 85px; 
-    height: 85px;
-  }
+    /* mobile and tablet stuff */
+    .main-navigation {
+        top: var(--space-md);
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%) rotate(180deg);
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+        width: calc(100vw - 10px);
+        max-width: 100%;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .nav-link {
+        padding-top: 0;
+        padding-right: var(--space-sm);
+        padding-bottom: 0;
+        padding-left: var(--space-sm);
+        font-size: 16px;
+        width: fit-content;
+    }
+
+    /* center everything */
+    .title-container {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .hero-center {
+        bottom: 8%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .profile-image {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .social-links {
+        width: 521px;
+        /* keep it the same size */
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
+        gap: 25px;
+        /* more space between buttons on mobile */
+    }
+
+    .social-link {
+        width: 85px;
+        height: 85px;
+    }
 }
 
 @media (min-width: 768px) {
-  .hero-center { bottom: 8%; } /* prevent overlap */
-  .title-container {
-    left: calc(50% + 150px);
-    transform: translateX(-50%);
-  }
-  .hero-center {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .profile-image {
-    left: calc(50% - 150px);
-    transform: translateX(-50%);
-  }
+    .hero-center {
+        bottom: 8%;
+    }
+
+    /* prevent overlap */
+    .title-container {
+        left: calc(50% + 150px);
+        transform: translateX(-50%);
+    }
+
+    .hero-center {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .profile-image {
+        left: calc(50% - 150px);
+        transform: translateX(-50%);
+    }
 }
 
 @media (max-width: 380px) {
-  /* really small screens - stack the nav vertically */
-  .main-navigation {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    gap: 5px;
-    transform: translateX(-50%);
-    width: 200px;
-  }
-  
-  .nav-link {
-    transform: none;
-    width: 120px;
-    text-align: center;
-    font-size: 16px;
-    padding-top: 0;
-    padding-right: 8px;
-    padding-bottom: 0;
-    padding-left: 8px;
-  }
+
+    /* really small screens - stack the nav vertically */
+    .main-navigation {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        gap: 5px;
+        transform: translateX(-50%);
+        width: 200px;
+    }
+
+    .nav-link {
+        transform: none;
+        width: 120px;
+        text-align: center;
+        font-size: 16px;
+        padding-top: 0;
+        padding-right: 8px;
+        padding-bottom: 0;
+        padding-left: 8px;
+    }
 }
