@@ -198,12 +198,12 @@ body:has(.contact-main) {
     font-family: var(--subtitle-font-family);
     font-size: var(--subtitle-font-size);
     font-weight: var(--subtitle-font-weight);
+    line-height: var(--subtitle-line-height);
     margin: var(--subtitle-margin);
     background: var(--gradient-green-horizontal);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
-    opacity: 0.9;
 }
 
 .page-paragraph {

@@ -17,3 +17,6 @@ https://css-tricks.com/gradient-borders-in-css/
 
 - added contact (contact.html & contact.css)
 - reworked about me page to match closer to contact style, centering and whatnots
+
+https://www.w3schools.com/howto/howto_css_column_cards.asp
+https://frontendly.io/blog/responsive-card-grid-layout

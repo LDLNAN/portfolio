@@ -100,7 +100,7 @@
     /* page layout */
 
     /* container sizes */
-    --size-container-max: 2064px;
+        /* removed unused --size-container-max */
     --size-container-contact-max: 2000px;
     --size-content-max-width: 650px;
     --size-content-min-width: 400px;
@@ -117,7 +117,8 @@
     --subtitle-font-family: var(--font-secondary);
     --subtitle-font-size: var(--text-size-md);
     --subtitle-font-weight: var(--font-weight-subtitle);
-    --subtitle-margin: 0 0 var(--space-md) 0;
+    --subtitle-line-height: 1.4;
+    --subtitle-margin: -10px 0 var(--space-md) 0;
 
     /* glass and transparency */
     --color-glass-card: rgba(255, 255, 255, 0.1);
@@ -140,6 +141,7 @@
     --gradient-green-vertical: linear-gradient(to bottom, #33FF33, #009900);
     --gradient-blue-horizontal: linear-gradient(to right, #3366FF, #002099);
     --gradient-blue-vertical: linear-gradient(to bottom, #3366FF, #002099);
+    --gradient-purple-blue-horizontal: linear-gradient(to right, #9933FF, #3366FF);
 
     --gradient-card-border: linear-gradient(135deg,
             rgba(255, 255, 255, 0.25) 0%,
