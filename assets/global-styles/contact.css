@@ -1,0 +1,393 @@
+@import url('../../utils/variables.css');
+
+/* ensure body background matches theme */
+body {
+    background-color: var(--color-light-bg) !important;
+}
+
+/* main page container - centered content - LIGHT THEME */
+.contact-main {
+    width: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--color-light-bg);
+    position: relative;
+}
+
+.contact-section {
+    position: relative;
+    width: 100%;
+    max-width: var(--size-container-contact-max);
+}
+
+/* nav bar tweaks for light theme */
+.contact-main .main-navigation {
+    background-color: var(--color-glass-navbar);
+    position: fixed;
+    top: var(--space-md);
+    right: var(--size-nav-position-right);
+    left: auto;
+    transform: rotate(180deg);
+    z-index: 1000;
+    width: auto;
+    height: var(--size-nav-height);
+    display: flex;
+    align-items: center;
+    border-radius: var(--radius-panel);
+}
+
+.contact-main .nav-link {
+    color: var(--color-light-text) !important;
+    min-width: var(--size-nav-button-min);
+    height: var(--size-nav-height);
+    padding: 0 var(--space-md);
+    transform: rotate(180deg);
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    font-size: var(--text-size-nav);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-main .nav-link:hover,
+.contact-main .nav-link.active {
+    background: var(--color-light-text) !important;
+    color: var(--color-light-bg) !important;
+    /* flip colors on interact */
+}
+
+@media (max-width: 767px) {
+    .contact-main .main-navigation {
+        top: var(--space-md);
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%) rotate(180deg);
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+        width: calc(100vw - 10px);
+        max-width: 100%;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .contact-main .nav-link {
+        padding-top: 0;
+        padding-right: var(--space-sm);
+        padding-bottom: 0;
+        padding-left: var(--space-sm);
+        font-size: 16px;
+        width: fit-content;
+        transform: rotate(180deg);
+        line-height: 1.2;
+    }
+}
+
+/* main content layout - single column with centered content */
+.contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    padding: var(--space-xxl) var(--space-lg);
+    gap: var(--space-xl);
+}
+
+/* responsive layout adjustments - single breakpoint using 767px */
+@media (max-width: 767px) {
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-lg);
+        padding: 120px var(--space-md) var(--space-lg) var(--space-md); /* match about me mobile padding */
+    }
+
+    .left-content {
+        max-width: 100%;
+        min-width: auto;
+    }
+}
+
+/* text content - main container, centered */
+.left-content {
+    flex: 1 1 var(--size-content-min-width);
+    max-width: var(--size-content-max-width);
+    min-width: var(--size-content-min-width);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* title section - ensure it doesn't flex grow */
+.title-section {
+    flex-shrink: 0;
+}
+
+/* content area - fixed height wrapper to match about me page exactly */
+.content-area {
+    height: 300px; /* same fixed height as about me page */
+    position: relative;
+    margin: 0 0 var(--space-lg) 0;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+/* cards container - positioned after fixed content */
+.cards-container {
+    margin-top: 0; /* reset to default */
+    flex-shrink: 0;
+}
+
+/* page title - static size */
+.contact-title {
+    font-family: var(--font-primary);
+    color: var(--color-light-text);
+    font-size: var(--text-size-lg);
+    line-height: 1;
+    margin: 0 0 var(--space-sm) 0;
+    letter-spacing: var(--letter-spacing-title);
+}
+
+/* subtitle - static size with green gradient */
+.contact-subtitle {
+    font-family: var(--subtitle-font-family);
+    font-size: var(--subtitle-font-size);
+    font-weight: var(--subtitle-font-weight);
+    margin: var(--subtitle-margin);
+    background: var(--gradient-green-horizontal);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0.9;
+}
+
+/* main paragraph - fixed height for alignment with about me */
+.contact-paragraph {
+    font-family: var(--font-secondary);
+    color: var(--color-light-text);
+    font-size: var(--text-size-base);
+    line-height: 1.6;
+    margin: 0 auto var(--space-lg) auto;
+    text-align: left;
+    max-width: var(--size-paragraph-max-width);
+    height: 120px; /* fixed height for paragraph section */
+    overflow: hidden;
+}
+
+/* glass cards with glass borders - LIGHT THEME, centered */
+.cards-container {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+/* individual cards - LIGHT THEME */
+.info-card {
+    background-color: var(--color-light-surface);
+    border-radius: var(--radius-panel);
+    padding: var(--space-md);
+    flex: 0 0 auto;
+    width: var(--size-card-square);
+    height: var(--size-card-square);
+    position: relative;
+    z-index: 1;
+    border: 1px solid var(--color-light-border-panel);
+}
+
+/* gradient border effect - LIGHT THEME */
+.info-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: var(--gradient-glass-border-light);
+    border-radius: calc(var(--radius-panel) + 2px);
+    z-index: -1;
+}
+
+/* solid background to create border effect - LIGHT THEME */
+.info-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-light-bg);
+    border-radius: var(--radius-panel);
+    z-index: -1;
+}
+
+.card-title {
+    font-family: "Maven Pro", sans-serif;
+    font-weight: 700;
+    color: var(--color-light-text);
+    font-size: 20px;
+    margin: 0 0 var(--space-sm) 0;
+}
+
+.card-text {
+    font-family: var(--font-secondary);
+    color: var(--color-light-text);
+    font-size: var(--text-size-body);
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+    /* center everything on mobile */
+    .title-section {
+        text-align: center;
+    }
+
+    .contact-content {
+        padding: 120px var(--space-md) var(--space-md) var(--space-md); /* match about me spacing */
+        gap: 40px;
+    }
+
+    .left-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /* stack cards vertically */
+    .cards-container {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    /* cards stay same size but centered */
+    .info-card {
+        margin: 0 auto;
+    }
+}
+
+/* contact page specific styles - LIGHT MODE with green gradient */
+.contact-link {
+    display: inline-block;
+    margin-top: var(--space-md);
+    padding: 8px 16px;
+    background: var(--gradient-green-horizontal);
+    color: var(--color-light-bg);
+    text-decoration: none;
+    border-radius: var(--radius-button);
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: var(--text-size-xs);
+    transition: transform 0.2s ease;
+}
+
+.contact-link:hover {
+    transform: scale(1.05);
+    color: var(--color-light-bg);
+}
+
+/* social container - clean single panel, tighter spacing */
+/* social container - fixed height for alignment */
+.social-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: var(--space-lg) auto;
+    padding: var(--space-md);
+    max-width: 500px;
+    height: 120px; /* fixed height to match remaining content area space */
+}
+
+.social-title {
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    color: var(--color-light-text);
+    font-size: var(--text-size-base);
+    margin-bottom: var(--space-sm);
+    text-align: center;
+    opacity: 0.9;
+}
+
+/* social links styling - horizontal compact layout */
+.social-links {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-md);
+    align-items: center;
+    justify-content: center;
+}
+
+.social-link {
+    width: var(--size-social-button-contact);
+    height: var(--size-social-button-contact-height);
+    background-color: var(--color-light-surface);
+    border-radius: var(--radius-button);
+    border: 2px solid transparent;
+    background-image: 
+        linear-gradient(var(--color-light-surface), var(--color-light-surface)),
+        var(--gradient-glass-border-light);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: var(--shadow-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    padding: var(--space-sm);
+    transition: transform 0.2s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.05);
+}
+
+.social-icon {
+    width: var(--size-social-icon-contact);
+    height: var(--size-social-icon-contact);
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-right: var(--space-xs);
+}
+
+.social-text {
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    color: var(--color-light-text);
+    font-size: var(--text-size-xxs);
+    white-space: nowrap;
+}
+
+@media (max-width: var(--breakpoint-mobile)) {
+    .social-links {
+        width: 100%;
+        max-width: 600px;
+        gap: var(--space-md);
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .social-link {
+        width: var(--size-social-button-contact);
+        height: var(--size-social-button-contact-height);
+        padding: var(--space-xs);
+    }
+
+    .social-icon {
+        width: var(--size-social-icon-contact);
+        height: var(--size-social-icon-contact);
+    }
+
+    .social-text {
+        font-size: calc(var(--text-size-xxs) - 1px);
+    }
+}

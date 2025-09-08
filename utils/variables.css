@@ -36,13 +36,21 @@
   
   /* container sizes */
   --size-container-max: 2064px;
+  --size-container-contact-max: 2000px;
+  --size-content-max-width: 650px;
+  --size-content-min-width: 400px;
+  --size-paragraph-max-width: 500px;
   
   /* component sizes */
   --size-nav-height: 60px;
   --size-nav-button-min: 80px;
+  --size-nav-position-right: 80px;
   --size-card-square: 300px;
   --size-social-button: 100px;
   --size-social-button-small: 85px;
+  --size-social-button-contact: 140px;
+  --size-social-button-contact-height: 50px;
+  --size-social-icon-contact: 28px;
   --size-icon: 50px;
   --size-nav: 26px;
   --nav-height: 60px;
@@ -61,15 +69,28 @@
   --font-primary: "Bebas Neue", sans-serif;
   --font-secondary: "Maven Pro", sans-serif;
   
-  /* font sizes - regular */
-  --text-size-hero: 148px;
-  --text-size-title: 72px;
-  --text-size-subtitle: 24px;
-  --text-size-nav: 26px;
-  --text-size-body: 18px;
+  /* font sizes - standardized scale */
+  --text-size-hero: 148px;        /* Hero/display text */
+  --text-size-xl: 72px;           /* Main titles */
+  --text-size-lg: 64px;           /* Large titles */
+  --text-size-nav: 26px;          /* Navigation (keep existing) */
+  --text-size-md: 24px;           /* Subtitles */
+  --text-size-base: 18px;         /* Body text, social titles */
+  --text-size-sm: 16px;           /* Navigation mobile, medium text */
+  --text-size-xs: 14px;           /* Buttons, small text */
+  --text-size-xxs: 13px;          /* Very small text, captions */
   
   /* line heights */
   --line-height-hero: 112px;
+  
+  /* font weights */
+  --font-weight-subtitle: 700;
+  
+  /* shared subtitle styles */
+  --subtitle-font-family: var(--font-secondary);
+  --subtitle-font-size: var(--text-size-md);
+  --subtitle-font-weight: var(--font-weight-subtitle);
+  --subtitle-margin: 0 0 var(--space-md) 0;
   
   /* spacing */
   --space-xs: 5px;
@@ -77,8 +98,12 @@
   --space-md: 20px;
   --space-lg: 40px;
   --space-xl: 80px;
+  --space-xxl: 120px;
   --space-word-clamp-min: -15px;
   --space-word-clamp-max: 0px;
+  
+  /* letter spacing */
+  --letter-spacing-title: 2px;
   
   /* border radius */
   --radius-panel: 20px;
@@ -125,6 +150,7 @@
   );
   
   --breakpoint-small: 768px;
+  --breakpoint-mobile: 767px;
   --breakpoint-medium: 1600px;
   
   --min-screen-width: 320px;
