@@ -216,7 +216,7 @@
     object-fit: contain;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 899px) {
 
     /* mobile and tablet stuff */
     .main-navigation {
@@ -274,7 +274,7 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
     .hero-center {
         bottom: 8%;
     }

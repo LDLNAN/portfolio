@@ -60,7 +60,7 @@ body:has(.contact-main) {
     /* colors flip when you hover/click */
 }
 
-@media (max-width: 767px) {
+@media (max-width: 899px) {
     .contact-main .main-navigation {
         top: var(--space-md);
         left: 50%;
@@ -96,7 +96,7 @@ body:has(.contact-main) {
 }
 
 /* mobile stuff */
-@media (max-width: 767px) {
+@media (max-width: 899px) {
     .title-section {
         text-align: center;
     }

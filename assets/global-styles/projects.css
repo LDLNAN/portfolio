@@ -46,7 +46,7 @@
     /* colour flip */
 }
 
-@media (max-width: 767px) {
+@media (max-width: 899px) {
 
     /* mobile nav */
     .projects-main .main-navigation {
@@ -211,7 +211,7 @@
 }
 
 /* breakpoint */
-@media (max-width: 767px) {
+@media (max-width: 899px) {
     .projects-content {
         flex-direction: column;
         align-items: center;

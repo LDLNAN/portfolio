@@ -41,7 +41,7 @@
 }
 
     /* breakpoint! */
-@media (max-width: 767px) {
+@media (max-width: 899px) {
     .aboutme-main .main-navigation {
         top: var(--space-md);
         left: 50%;
@@ -244,7 +244,7 @@
 }
 
 /* stack vertically */
-@media (max-width: 767px) {
+@media (max-width: 899px) {
     .aboutme-content {
         flex-direction: column;
         align-items: center;

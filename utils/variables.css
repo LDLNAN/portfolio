@@ -59,8 +59,8 @@
     --radius-button: 15px;
 
     /* breakpoints */
-    --breakpoint-small: 768px;
-    --breakpoint-mobile: 767px;
+        --breakpoint-small: 900px;
+        --breakpoint-mobile: 899px;
     --breakpoint-medium: 1600px;
     --min-screen-width: 320px;
     --min-screen-height: 568px;
