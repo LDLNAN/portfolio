@@ -56,28 +56,34 @@
     letter-spacing: -0.02em;
     line-height: var(--line-height-hero);
     word-spacing: clamp(var(--space-word-clamp-min), -1.5vw, var(--space-word-clamp-max));
+    transform: translateX(120px);
+    opacity: 0;
+    animation: slide-in-from-right-hero 2000ms cubic-bezier(.2,.9,.2,1) 0ms both;
 }
 
-/* wrapper for the social buttons so they line up nicely */
-.hero-center {
-    position: absolute;
-    bottom: 8%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: max-content;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+/* developer & music producer text */
+.hero-subtitle {
+    width: var(--size-subtitle-width);
+    margin: 0;
+    margin-top: -5px;
+    margin-left: 4px;
+    mix-blend-mode: difference;
+    font-family: "Maven Pro", sans-serif;
+    font-weight: 700;
+    color: var(--color-dark-text);
+    font-size: var(--text-size-subtitle);
+    line-height: normal;
+    transform: translateX(120px);
+    opacity: 0;
+    animation: slide-in-from-right-hero 1000ms cubic-bezier(.2,.9,.2,1) 1000ms both;
 }
 
-/* just another wrapper for the content */
-.content-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+@keyframes slide-in-from-right-hero {
+    from { transform: translateX(105%); opacity: 0; }
+    to   { transform: translateX(0%); opacity: 1; }
 }
+
+
 
 /* beautiful */
 .profile-image {
@@ -91,9 +97,15 @@
     object-fit: contain;
     object-position: bottom;
     z-index: 1;
+    animation: slide-in-from-left-hero 2000ms cubic-bezier(.2,.9,.2,1) 0ms both;
 }
 
-/* nav bar - glass */
+@keyframes slide-in-from-left-hero {
+    from { transform: translateX(-100%); opacity: 0; }
+    to   { transform: translateX(-50%); opacity: 1; }
+}
+
+/* nav bar */
 .main-navigation {
     width: auto;
     height: var(--size-nav-height);
@@ -131,47 +143,50 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: var(--radius-button);
+    border-radius: var(--radius-button-small);
     text-decoration: none;
-    /* remove underlines */
+    transition: ease-in-out color, background 0.15s;
 }
 
 /* hover - black background with white text */
 .nav-link:hover {
-    background: var(--color-dark-bg);
-    color: var(--color-dark-text);
-    border-radius: var(--radius-button);
+    background: var(--color-light-bg);
+    color: var(--color-medium-text);
 }
 
 /* active state - same as hover effect */
 .nav-link.active {
     background: var(--color-dark-bg);
     color: var(--color-dark-text);
-    border-radius: var(--radius-button);
 }
 
-/* developer & music producer text */
-.hero-subtitle {
-    width: var(--size-subtitle-width);
-    margin: 0;
-    margin-top: -5px;
-    margin-left: 4px;
-    mix-blend-mode: difference;
-    font-family: "Maven Pro", sans-serif;
-    font-weight: 700;
-    color: var(--color-dark-text);
-    font-size: var(--text-size-subtitle);
-    line-height: normal;
+/* wrapper for the social buttons so they line up nicely */
+.hero-center {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    animation: slide-in-from-down-hero 2000ms cubic-bezier(.2,.9,.2,1) 1700ms both;
 }
 
-/* glass panel with all the social buttons */
+@keyframes slide-in-from-down-hero {
+    from { transform: translateY(100%) translateX(-50%); opacity: 0; }
+    to   { transform: translateY(0%) translateX(-50%); opacity: 1; }
+}
+
+/* panel with all the social buttons */
 .social-links {
     position: relative;
     width: var(--size-social-panel-width);
     height: var(--size-social-panel-height);
     margin: 0;
     z-index: 2;
-    background-color: var(--color-light-surface);
+    background-color: var(--color-light-transparent-bg);
     border-radius: var(--radius-panel);
     border: 1px solid var(--color-light-border-panel);
     display: flex;
@@ -181,18 +196,16 @@
     padding-right: var(--space-md);
     padding-bottom: var(--space-md);
     padding-left: var(--space-md);
+    box-shadow: var(--shadow-main);
 }
 
 /* each social media button */
 .social-link {
     width: var(--size-social-button-width);
     height: var(--size-social-button-height);
-    background-color: var(--color-light-surface);
+    background-color: var(--color-light-button-bg);
     border-radius: var(--radius-button);
-    border: 2px solid transparent;
-    background-image:
-        linear-gradient(var(--color-light-surface), var(--color-light-surface)),
-        var(--gradient-glass-border-light);
+    border: 1px solid var(--color-light-border-button);
     background-origin: border-box;
     background-clip: padding-box, border-box;
     box-shadow: var(--shadow-glass);
@@ -202,18 +215,23 @@
     text-decoration: none;
     position: relative;
     z-index: 1;
+    transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
 }
-
-/* remove the pseudo-elements since we're using a different technique */
 
 .social-link:hover {
-    transform: scale(1.05);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-subtle);
 }
 
+.social-link:hover .social-icon {
+    transform: scale(110%);
+
+}
 .social-icon {
     width: 50px;
     height: 50px;
     object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
 @media (max-width: 899px) {

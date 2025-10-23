@@ -20,3 +20,11 @@ https://css-tricks.com/gradient-borders-in-css/
 
 https://www.w3schools.com/howto/howto_css_column_cards.asp
 https://frontendly.io/blog/responsive-card-grid-layout
+
+# **ROUND 2**
+_(Commit)_
+- Added animations to hero page, some clean-up, some messy-ing.
+- Maybe will need to populate nav-bar with JS instead of hardcoding per-page, as now the hero-page differs from the others.
+- Should also allow for cool entry animations for other pages, as those do not work statically.
+- Do a round of clean-up please.
+_TL:DR: Hero page animations, use JS for this stuff later. Clean TF up you dirty rat._

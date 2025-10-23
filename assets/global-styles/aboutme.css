@@ -10,6 +10,7 @@
     align-items: flex-start;
     background-color: var(--color-dark-bg);
     position: relative;
+    transition: all 1.0s ease;
 }
 
 .aboutme-section {
@@ -140,78 +141,9 @@
     box-shadow: var(--shadow-main);
 }
 
-.aboutme-title {
-    font-family: var(--font-primary);
-    color: var(--color-dark-text);
-    font-size: var(--text-size-lg);
-    line-height: 1;
-    margin: 0 0 var(--space-sm) 0;
-    letter-spacing: var(--letter-spacing-title);
-}
 
-.aboutme-subtitle {
-    font-family: var(--subtitle-font-family);
-    font-size: var(--subtitle-font-size);
-    font-weight: var(--subtitle-font-weight);
-    line-height: var(--subtitle-line-height);
-    margin: var(--subtitle-margin);
-    background: var(--gradient-red-horizontal);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: var(--color-dark-text-secondary);
-}
 
-.cards-container {
-    display: flex;
-    gap: var(--space-md);
-    flex-wrap: nowrap;
-    justify-content: center;
-}
 
-.info-card {
-    background-color: var(--color-glass-card);
-    border-radius: var(--radius-panel);
-    padding: var(--space-md);
-    flex: 0 0 auto;
-    width: var(--size-card-square);
-    height: var(--size-card-square);
-    position: relative;
-    z-index: 1;
-}
-
-.info-card::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: var(--gradient-glass-border-dark);
-    border-radius: calc(var(--radius-panel) + 2px);
-    z-index: -1;
-}
-
-.info-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--color-dark-surface);
-    border-radius: var(--radius-panel);
-    z-index: -1;
-}
-
-.card-title {
-    font-family: "Maven Pro", sans-serif;
-    font-weight: 700;
-    color: var(--color-dark-text);
-    font-size: 20px;
-    margin: 0 0 var(--space-sm) 0;
-    text-align: left;
-}
 
 .card-text {
     font-family: "Maven Pro", sans-serif;

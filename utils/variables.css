@@ -11,6 +11,7 @@
 
     /* theme colors */
     --color-dark-bg: #000000;
+    --color-medium-bg: #dddddd;
     --color-dark-surface: #0f0f0f;
     --color-dark-text: #ffffff;
     --color-dark-text-secondary: rgba(255, 255, 255, 0.8);
@@ -19,8 +20,12 @@
     --color-light-bg: #ffffff;
     --color-light-surface: rgba(246, 246, 246, 0.7);
     --color-light-border-panel: rgba(202, 202, 202, 0.7);
-    --color-light-border-button: rgba(233, 233, 233, 0.7);
+    --color-light-border-button: rgba(193, 193, 193, 0.7);
+    --color-light-button-bg: rgba(244, 244, 244, 1.0);
     --color-light-text: #000000;
+    --color-light-transparent-bg: rgba(255, 255, 255, 0.2);
+
+    --color-medium-text: #747474;
 
     --color-text-white: #ffffff;
     --color-primary: #ffffff;
@@ -55,8 +60,9 @@
     --space-word-clamp-max: 0px;
 
     /* rounded corners */
-    --radius-panel: 20px;
-    --radius-button: 15px;
+    --radius-panel: 35px;
+    --radius-button: 25px;
+    --radius-button-small: 15px;
 
     /* breakpoints */
         --breakpoint-small: 900px;
@@ -129,7 +135,7 @@
     --color-card-bg: rgba(255, 255, 255, 0.05);
 
     /* shadows */
-    --shadow-main: 0 10px 30px rgba(0, 0, 0, 0.3);
+    --shadow-main: 0 10px 30px rgba(0, 0, 0, 0.2);
     --shadow-subtle: 0 4px 8px rgba(0, 0, 0, 0.1);
 
     /* gradients */
