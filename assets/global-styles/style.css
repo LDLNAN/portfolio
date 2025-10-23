@@ -311,11 +311,16 @@ html, body {
         height: clamp(36px, 9vw, 50px);
         object-fit: contain;
     }
+    .hero-title {
+        font-size: clamp(32px, 25vw, 128px);
+        line-height: 0.75;;
+    }
 }
 
 @media (min-width: 900px) {
     .hero-center {
         bottom: 8%;
+        
     }
 
     /* prevent overlap */
