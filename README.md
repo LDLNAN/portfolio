@@ -37,6 +37,7 @@ _TL:DR: Hero page animations, use JS for this stuff later. Clean TF up you dirty
 
 #### _(Commit)_
 - README update.
+- Compressed hero image.
 - Mobile hero page social panel changed -> May need to look for more consistent solution?
 
 ---
