@@ -7,49 +7,52 @@
     <title>Lucas Donald - Portfolio</title>
     <link rel="stylesheet" href="assets/global-styles/globals.css">
     <link rel="stylesheet" href="assets/global-styles/style.css">
-    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Maven+Pro:wght@400;700&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
-    <main class="portfolio-main">
-        <section class="hero-section">
-            <header class="hero-header">
-                <div class="title-container">
-                    <h1 class="hero-title">Lucas<br />Donald</h1>
-                    <p class="hero-subtitle">Developer & Music Producer.</p>
-                </div>
-                <nav class="main-navigation">
-                    <a href="pages/contact.html" class="nav-link">CONTACT ME</a>
-                    <a href="pages/projects.html" class="nav-link">PROJECTS</a>
-                    <a href="pages/aboutme.html" class="nav-link">ABOUT ME</a>
-                    <a href="index.html" class="nav-link active">HOME</a>
-                </nav>
-            </header>
-            <img class="profile-image" src="assets/images/home_picture.png"
-                alt="Lucas Donald - Developer & Music Producer" />
+    <div class="portfolio-main">
+        <div class="main-navigation">
+        <button class="nav-toggle-btn" onclick="toggleMenu()">
+            <img class="hamburger-svg" src="assets/images/hamburger-menu-svgrepo-com.svg" alt="Menu" width="32" height="32" />
+        </button>
 
-            <div class="hero-center">
-                <div class="content-container">
-                    <div class="social-links">
-                        <a href="http://discordapp.com/users/tilam" class="social-link discord-link" aria-label="Discord" target="_blank">
-                            <img class="social-icon" src="assets/images/Discord.svg" alt="Discord" />
-                        </a>
-                        <a href="https://www.instagram.com/tilambtw/" class="social-link instagram-link" aria-label="Instagram" target="_blank">
-                            <img class="social-icon" src="assets/images/instagram.svg" alt="Instagram" />
-                        </a>
-                        <a href="https://github.com/LDLNAN" class="social-link github-link" aria-label="GitHub" target="_blank">
-                            <img class="social-icon" src="assets/images/Github shape.svg" alt="GitHub" />
-                        </a>
-                        <a href="https://soundcloud.com/lucass-donald" class="social-link soundcloud-link" aria-label="SoundCloud" target="_blank">
-                            <img class="social-icon" src="assets/images/Soundcloud Shape.svg" alt="SoundCloud" />
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+        <ul id="nav-menu" class="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link active">HOME</a></li>
+            <li class="nav-item"><a href="pages/aboutme.html" class="nav-link">ABOUT ME</a></li>
+            <li class="nav-item"><a href="pages/projects.html" class="nav-link">PROJECTS</a></li>
+            <li class="nav-item"><a href="pages/contact.html" class="nav-link">CONTACT ME</a></li>
+        </ul>
+    </div>
+
+    <div class="hero-title-wrapper">
+            <h1 class="hero-title">Lucas<br />Donald</h1>
+            <p class="hero-subtitle">Developer & Music Producer.</p>
+        </div>
+        
+        <img class="hero-image" src="assets/images/home_picture.png"
+            alt="Lucas Donald - Developer & Music Producer" />
+
+        <div class="social-panel">
+            <a href="http://discordapp.com/users/tilam" class="social-link discord-button" target="_blank">
+                <img class="social-icon" src="assets/images/Discord.svg" alt="Discord" />
+            </a>
+            <a href="https://www.instagram.com/tilambtw/" class="social-link instagram-button" target="_blank">
+                <img class="social-icon" src="assets/images/instagram.svg" alt="Instagram" />
+            </a>
+            <a href="https://github.com/LDLNAN" class="social-link github-button" target="_blank">
+                <img class="social-icon" src="assets/images/Github shape.svg" alt="GitHub" />
+            </a>
+            <a href="https://soundcloud.com/lucass-donald" class="social-link soundcloud-button" target="_blank">
+                <img class="social-icon" src="assets/images/Soundcloud Shape.svg" alt="SoundCloud" />
+            </a>
+        </div>
+    </div>
+
+    <script src="scripts/nav.js"></script>
 </body>
 
 </html>

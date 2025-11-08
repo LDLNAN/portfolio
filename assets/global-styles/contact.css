@@ -2,6 +2,7 @@
 
 body:has(.contact-main) {
     background-color: var(--color-light-bg);
+    overflow: auto;
 }
 
 .contact-main {
@@ -9,6 +10,7 @@ body:has(.contact-main) {
     min-width: 100vw;
     min-height: 100vh;
     overflow-x: hidden;
+    overflow-y: auto;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -22,67 +24,43 @@ body:has(.contact-main) {
     max-width: var(--size-container-contact-max);
 }
 
-/* light */
-.contact-main .main-navigation {
-    background-color: var(--color-glass-navbar);
-    position: fixed;
-    top: var(--space-md);
-    right: var(--size-nav-position-right);
-    left: auto;
-    transform: rotate(180deg);
-    z-index: 1000;
-    width: auto;
-    height: var(--size-nav-height);
-    display: flex;
-    align-items: center;
-    border-radius: var(--radius-panel);
-}
-
 .contact-main .nav-link {
-    color: var(--color-light-text);
-    min-width: var(--size-nav-button-min);
-    height: var(--size-nav-height);
-    padding: 0 var(--space-md);
-    transform: rotate(180deg);
-    font-family: var(--font-secondary);
-    font-weight: 700;
-    font-size: var(--text-size-nav);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: black;
 }
 
-.contact-main .nav-link:hover,
+.contact-main .nav-link:hover {
+    color: #747474;
+}
+
 .contact-main .nav-link.active {
-    background: var(--color-light-text);
-    color: var(--color-light-bg);
-    /* colors flip when you hover/click */
+    background: black !important;
+    color: white !important;
+}
+
+.contact-main .hamburger-svg {
+    color: black;
+}
+
+.contact-main .nav-menu {
+    background: white;
+}
+
+.contact-main .nav-menu .nav-link {
+    color: black;
 }
 
 @media (max-width: 899px) {
     .contact-main .main-navigation {
-        top: var(--space-md);
-        left: 50%;
-        right: auto;
-        transform: translateX(-50%) rotate(180deg);
-        flex-wrap: wrap;
-        gap: var(--space-sm);
-        width: calc(100vw - 10px);
-        max-width: 100%;
-        justify-content: center;
-        align-items: flex-start;
+        top: 10px !important;
+        left: 10px !important;
+        right: auto !important;
+        transform: none !important;
+        background-color: transparent !important;
     }
 
-    .contact-main .nav-link {
-        padding-top: 0;
-        padding-right: var(--space-sm);
-        padding-bottom: 0;
-        padding-left: var(--space-sm);
-        font-size: 16px;
-        width: fit-content;
-        transform: rotate(180deg);
-        line-height: 1.2;
+    .contact-main .nav-menu .nav-link.active {
+        background: black;
+        color: white;
     }
 }
 
@@ -113,55 +91,6 @@ body:has(.contact-main) {
         min-width: auto;
         align-items: center;
     }
-
-    .social-container {
-        margin: var(--space-lg) auto;
-        max-width: var(--layout-social-container-max);
-    }
-
-    .social-container .social-links {
-        width: 100%;
-        max-width: var(--layout-social-links-max);
-        gap: var(--space-md);
-        flex-wrap: wrap;
-        justify-content: center;
-        flex-direction: row;
-        margin: 0 auto;
-    }
-
-    .social-link {
-        width: var(--size-social-button-contact);
-        height: var(--size-social-button-contact-height);
-        padding: var(--space-xs);
-    }
-
-    .social-icon {
-        width: var(--size-social-icon-contact);
-        height: var(--size-social-icon-contact);
-    }
-
-    .social-text {
-        font-size: calc(var(--text-size-xxs) - 1px);
-    }
-
-    .cards-container {
-        flex-direction: column;
-        gap: var(--space-sm);
-    }
-
-    /* center */
-    .info-card {
-        margin: 0 auto;
-    }
-}
-
-.left-content {
-    flex: 1 1 var(--size-content-min-width);
-    max-width: var(--size-content-max-width);
-    min-width: var(--size-content-min-width);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
 }
 
 .title-section {
@@ -169,20 +98,11 @@ body:has(.contact-main) {
     flex-shrink: 0;
 }
 
-.content-area {
-    height: 300px;
-    /* same fixed height as about me page i thinks */
-    position: relative;
-    margin: 0 0 var(--space-lg) 0;
+.main-content {
     display: flex;
     flex-direction: column;
-    flex-shrink: 0;
-}
-
-.cards-container {
-    margin-top: 0;
-    /* reset to default */
-    flex-shrink: 0;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .contact-title {
@@ -204,163 +124,4 @@ body:has(.contact-main) {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.page-paragraph {
-    font-family: var(--font-secondary);
-    color: var(--color-light-text);
-    font-size: var(--text-size-base);
-    line-height: 1.6;
-    margin: 0 auto var(--space-lg) auto;
-    text-align: left;
-    max-width: var(--size-paragraph-max-width);
-    height: var(--layout-content-height-standard);
-    overflow: hidden;
-}
-
-.cards-container {
-    display: flex;
-    gap: var(--space-md);
-    flex-wrap: nowrap;
-    justify-content: center;
-}
-
-.info-card {
-    background-color: var(--color-light-surface);
-    border-radius: var(--radius-panel);
-    padding: var(--space-md);
-    flex: 0 0 auto;
-    width: var(--size-card-square);
-    height: var(--size-card-square);
-    position: relative;
-    z-index: 1;
-    border: 1px solid var(--color-light-border-panel);
-}
-
-.info-card::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: var(--gradient-glass-border-light);
-    border-radius: calc(var(--radius-panel) + 2px);
-    z-index: -1;
-}
-
-.info-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--color-light-bg);
-    border-radius: var(--radius-panel);
-    z-index: -1;
-}
-
-.card-title {
-    font-family: "Maven Pro", sans-serif;
-    font-weight: 700;
-    color: var(--color-light-text);
-    font-size: 20px;
-    margin: 0 0 var(--space-sm) 0;
-    text-align: left;
-
-}
-
-.card-text {
-    font-family: var(--font-secondary);
-    color: var(--color-light-text);
-    font-size: var(--text-size-body);
-    line-height: 1.5;
-    margin: 0;
-    text-align: left;
-}
-
-.contact-link {
-    display: inline-block;
-    margin-top: var(--space-md);
-    padding: 8px 16px;
-    background: var(--gradient-green-horizontal);
-    color: var(--color-light-bg);
-    text-decoration: none;
-    border-radius: var(--radius-button);
-    font-family: var(--font-secondary);
-    font-weight: 600;
-    font-size: var(--text-size-xs);
-}
-
-.contact-link:hover {
-    transform: scale(1.05);
-    color: var(--color-light-bg);
-}
-
-.social-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: var(--space-lg) auto;
-    padding: var(--space-md);
-    max-width: var(--layout-social-container-max);
-    height: var(--layout-content-height-standard);
-}
-
-.social-title {
-    font-family: var(--font-secondary);
-    font-weight: 600;
-    color: var(--color-light-text);
-    font-size: var(--text-size-base);
-    margin-bottom: var(--space-sm);
-    text-align: center;
-    opacity: 0.9;
-}
-
-.social-links {
-    display: flex;
-    flex-direction: row;
-    gap: var(--space-md);
-    align-items: center;
-    justify-content: center;
-}
-
-.social-link {
-    width: var(--size-social-button-contact);
-    height: var(--size-social-button-contact-height);
-    background-color: var(--color-light-surface);
-    border-radius: var(--radius-button);
-    border: 2px solid transparent;
-    background-image:
-        linear-gradient(var(--color-light-surface), var(--color-light-surface)),
-        var(--gradient-glass-border-light);
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-    box-shadow: var(--shadow-subtle);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-sm);
-    text-decoration: none;
-    position: relative;
-    z-index: 1;
-    padding: var(--space-sm);
-}
-
-.social-icon {
-    width: var(--size-social-icon-contact);
-    height: var(--size-social-icon-contact);
-    object-fit: contain;
-    flex-shrink: 0;
-    margin-right: var(--space-xs);
-}
-
-.social-text {
-    font-family: var(--font-secondary);
-    font-weight: 600;
-    color: var(--color-light-text);
-    font-size: var(--text-size-xxs);
-    white-space: nowrap;
 }

@@ -9,67 +9,38 @@
     <link rel="stylesheet" href="../assets/global-styles/style.css">
     <link rel="stylesheet" href="../assets/global-styles/contact.css">
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Maven+Pro:wght@400;700&family=Inria+Sans:wght@400&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <main class="contact-main">
-        <section class="contact-section">
-            <nav class="main-navigation">
-                <a href="contact.html" class="nav-link active">CONTACT ME</a>
-                <a href="projects.html" class="nav-link">PROJECTS</a>
-                <a href="aboutme.html" class="nav-link">ABOUT ME</a>
-                <a href="index.html" class="nav-link">HOME</a>
-            </nav>
+    <div class="contact-main">
+        <div class="main-navigation">
+            <button class="nav-toggle-btn" onclick="toggleMenu()">
+                <img class="hamburger-svg" src="../assets/images/hamburger-menu-svgrepo-com.svg" alt="Menu" width="32" height="32" />
+            </button>
 
+            <ul id="nav-menu" class="nav-menu">
+                <li class="nav-item"><a href="../index.html" class="nav-link">HOME</a></li>
+                <li class="nav-item"><a href="aboutme.html" class="nav-link">ABOUT ME</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link">PROJECTS</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link active">CONTACT ME</a></li>
+            </ul>
+        </div>
+        <div class="contact-section">
             <div class="contact-content">
                 <div class="main-content">
                     <div class="title-section">
                         <h1 class="contact-title">Contact Me</h1>
                         <p class="contact-subtitle">Please, I'm so lonely.</p>
                     </div>
-
-                    <p class="page-paragraph">
-                        Get in touch. I'm a cool dude, I swear. What have you got to lose? Dignity? Maybe.
-                    </p>
-
-                    <div class="social-container">
-                        <h3 class="social-title">Message me: </h3>
-                        <div class="social-links">
-                            <a href="http://discordapp.com/users/tilam" class="social-link discord-link" aria-label="Discord">
-                                <img class="social-icon" src="../assets/images/Discord.svg" alt="Discord" />
-                                <span class="social-text">tilam</span>
-                            </a>
-                            <a href="https://www.instagram.com/tilambtw/" class="social-link instagram-link" aria-label="Instagram">
-                                <img class="social-icon" src="../assets/images/instagram.svg" alt="Instagram" />
-                                <span class="social-text">tilambtw</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="cards-container">
-                        <div class="info-card">
-                            <h3 class="card-title">Email</h3>
-                            <p class="card-text">lucas-donald@live.nmit.ac.nz</p>
-                            <a href="mailto:lucas-donald@live.nmit.ac.nz" class="contact-link">Send Email</a>
-                        </div>
-
-                        <div class="info-card">
-                            <h3 class="card-title">Location</h3>
-                            <p class="card-text">Nelson, New Zealand</p>
-                            <p class="card-text">Can work remotely!</p>
-                        </div>
-
-                        <div class="info-card">
-                            <h3 class="card-title">Availability</h3>
-                            <p class="card-text">Mon-Fri: 11AM - 7PM NZT</p>
-                            <p class="card-text">Response within 24 hours</p>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </div>
+
+    <script src="../scripts/nav.js"></script>
 </body>
 
 </html>

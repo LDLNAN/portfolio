@@ -11,21 +11,27 @@
     <link rel="stylesheet" href="../assets/global-styles/aboutme.css">
     <!-- maybe change to black and white versions, we'll see -->
     <!-- Google Fonts -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Maven+Pro:wght@400;700&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
-    <main class="aboutme-main">
-        <section class="aboutme-section">
-            <nav class="main-navigation">
-                <a href="contact.html" class="nav-link">CONTACT ME</a>
-                <a href="projects.html" class="nav-link">PROJECTS</a>
-                <a href="aboutme.html" class="nav-link active">ABOUT ME</a>
-                <a href="index.html" class="nav-link">HOME</a>
-            </nav>
+    <div class="aboutme-main">
+        <div class="main-navigation">
+            <button class="nav-toggle-btn" onclick="toggleMenu()">
+                <img class="hamburger-svg" src="../assets/images/hamburger-menu-svgrepo-com.svg" alt="Menu" width="32" height="32" />
+            </button>
 
+            <ul id="nav-menu" class="nav-menu">
+                <li class="nav-item"><a href="../index.html" class="nav-link">HOME</a></li>
+                <li class="nav-item"><a href="aboutme.html" class="nav-link active">ABOUT ME</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link">PROJECTS</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT ME</a></li>
+            </ul>
+        </div>
+        <div class="aboutme-section">
             <div class="aboutme-content">
                 <div class="main-content">
                     <div class="title-section">
@@ -33,27 +39,35 @@
                         <p class="aboutme-subtitle">Who is this dude?</p>
                     </div>
 
-                    <p class="page-paragraph">
-                        I’m 24 and grew up in the Tasman region. I’ve always been interested in software, DAWs, and
-                        exploring new
-                        tools & toys. Right now I’m in my first
-                        year at NMIT studying IT, where I’m building on that curiosity in a more structured way. Outside
-                        of study, I’ve been making music for over a decade, which keeps me creative and adaptable.
-                        Whether I’m coding, making noise, or learning something new, I enjoy exploring
-                        different ways to bring tech and creativity together.
-                    </p>
-                    <!-- these are filler ai stuff -->
+                    <div class="two-column-container">
+                        <div class="text-column">
+                            <p class="page-paragraph">
+                                I'm 24 and grew up in the Tasman region. I've always been interested in software, DAWs, and
+                                exploring new
+                                tools & toys. Right now I'm in my first
+                                year at NMIT studying IT, where I'm building on that curiosity in a more structured way. Outside
+                                of study, I've been making music for over a decade, which keeps me creative and adaptable.
+                                Whether I'm coding, making noise, or learning something new, I enjoy exploring
+                                different ways to bring tech and creativity together.
+                            </p>
+                        </div>
+                        <div class="image-column">
+                            <div class="image-container">
+                                <img class="aboutme-image" src="../assets/images/lucas_cutie.jpg" alt="Lucas Donald" />
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="cards-container">
                         <div class="info-card">
                             <h3 class="card-title">In A Nutshell</h3>
                             <p class="card-text">24 years old, first-year IT student at NMIT, creative with a love of
-                                technology.
+                                technology.</p>
                         </div>
 
                         <div class="info-card">
                             <h3 class="card-title">Skills</h3>
-                            <p class="card-text">JavaScript, HTML, CSS, + 10+ years making noise.
-                            </p>
+                            <p class="card-text">JavaScript, HTML, CSS, + 10+ years making noise.</p>
                         </div>
 
                         <div class="info-card">
@@ -62,15 +76,13 @@
                                 ideas.</p>
                         </div>
                     </div>
-
-                    <div class="image-container">
-                        <img class="aboutme-image" src="../assets/images/lucas_cutie.jpg" alt="Lucas Donald" />
-                    </div>
                 </div>
             </div>
 
-        </section>
-    </main>
+        </div>
+    </div>
+
+    <script src="../scripts/nav.js"></script>
 </body>
 
 </html>

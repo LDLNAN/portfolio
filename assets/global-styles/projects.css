@@ -1,10 +1,15 @@
 @import url('../../utils/variables.css');
 
+body:has(.projects-main) {
+    overflow: auto;
+}
+
 .projects-main {
     width: 100%;
     min-width: 100vw;
     min-height: 100vh;
     overflow-x: hidden;
+    overflow-y: auto;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -18,59 +23,57 @@
     max-width: 2000px;
 }
 
-/* dark */
-.projects-main .main-navigation {
-    background-color: var(--color-glass-navbar-dark);
-    position: fixed;
-    top: var(--space-md);
-    right: var(--size-nav-position-right);
-    left: auto;
-    transform: rotate(180deg);
-    z-index: 1000;
-    width: auto;
-    height: var(--size-nav-height);
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    border-radius: var(--radius-panel);
-}
-
 .projects-main .nav-link {
-    color: var(--color-dark-text);
+    color: #ececec;
 }
 
-.projects-main .nav-link:hover,
+.projects-main .nav-link:hover {
+    color: #747474;
+}
+
 .projects-main .nav-link.active {
-    background: var(--color-dark-text);
-    color: var(--color-dark-bg);
-    /* colour flip */
+    background: #ececec !important;
+    color: #131313 !important;
+}
+
+.projects-main .hamburger-svg {
+    color: #ececec;
+    filter: invert(1);
+}
+
+.projects-main .nav-menu {
+    background: #131313;
+}
+
+.projects-main .nav-menu .nav-link {
+    color: #ececec;
+}
+
+.projects-main .nav-toggle-btn {
+    background-color: #131313;
+    border-color: transparent;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.projects-main .nav-toggle-btn:hover {
+    background-color: rgba(30, 30, 30, 0.7);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 @media (max-width: 899px) {
 
     /* mobile nav */
     .projects-main .main-navigation {
-        top: var(--space-md);
-        left: 50%;
-        right: auto;
-        transform: translateX(-50%) rotate(180deg);
-        flex-wrap: wrap;
-        gap: var(--space-sm);
-        width: calc(100vw - 10px);
-        max-width: 100%;
-        justify-content: center;
-        align-items: flex-start;
+        top: 10px !important;
+        left: 10px !important;
+        right: auto !important;
+        transform: none !important;
+        background-color: transparent !important;
     }
 
-    .projects-main .nav-link {
-        padding-top: 0;
-        padding-right: var(--space-sm);
-        padding-bottom: 0;
-        padding-left: var(--space-sm);
-        font-size: 16px;
-        width: fit-content;
-        transform: rotate(180deg);
-        line-height: 1.2;
+    .projects-main .nav-menu .nav-link.active {
+        background: #ececec;
+        color: #131313;
     }
 }
 
@@ -125,20 +128,21 @@
     width: 100%;
 }
 
-.project-card {
-    background: var(--color-card-bg);
-    border-radius: var(--radius-panel);
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
+.projects-content .project-card {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 12px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid var(--color-glass-border);
-    backdrop-filter: blur(10px);
+    text-decoration: none;
 }
 
-.project-card:hover {
+.projects-content .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-main);
+    box-shadow: var(--shadow-large);
 }
 
 .project-image {
@@ -146,6 +150,7 @@
     height: 200px;
     overflow: hidden;
     position: relative;
+    border-radius: 15px 15px 0 0;
 }
 
 .project-image img {
@@ -165,19 +170,19 @@
 }
 
 .project-title {
-    font-family: var(--font-secondary);
+    font-family: "Maven Pro", sans-serif;
     font-weight: 700;
-    color: var(--color-dark-text);
-    font-size: var(--text-size-md);
-    margin: 0 0 var(--space-sm) 0;
+    color: #ececec;
+    font-size: 24px;
+    margin: 0 0 10px 0;
 }
 
 .project-description {
-    font-family: var(--font-secondary);
-    color: var(--color-dark-text-secondary);
-    font-size: var(--text-size-base);
+    font-family: "Maven Pro", sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
     line-height: 1.5;
-    margin: 0 0 var(--space-md) 0;
+    margin: 0 0 20px 0;
 }
 
 .project-tech {
@@ -189,11 +194,11 @@
 .tech-tag {
     background: white;
     color: black;
-    font-family: var(--font-secondary);
-    font-size: var(--text-size-xs);
+    font-family: "Maven Pro", sans-serif;
+    font-size: 14px;
     font-weight: 600;
-    padding: var(--space-xs) var(--space-sm);
-    border-radius: var(--radius-button);
+    padding: 5px 10px;
+    border-radius: 10px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }

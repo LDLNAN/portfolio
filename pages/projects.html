@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Lucas Portfolio</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Maven+Pro:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../assets/global-styles/globals.css">
@@ -14,15 +16,20 @@
 </head>
 
 <body>
-    <main class="projects-main">
-        <section class="projects-section">
-            <nav class="main-navigation">
-                <a href="contact.html" class="nav-link">CONTACT ME</a>
-                <a href="projects.html" class="nav-link active">PROJECTS</a>
-                <a href="aboutme.html" class="nav-link">ABOUT ME</a>
-                <a href="index.html" class="nav-link">HOME</a>
-            </nav>
+    <div class="projects-main">
+        <div class="main-navigation">
+            <button class="nav-toggle-btn" onclick="toggleMenu()">
+                <img class="hamburger-svg" src="../assets/images/hamburger-menu-svgrepo-com.svg" alt="Menu" width="32" height="32" />
+            </button>
 
+            <ul id="nav-menu" class="nav-menu">
+                <li class="nav-item"><a href="../index.html" class="nav-link">HOME</a></li>
+                <li class="nav-item"><a href="aboutme.html" class="nav-link">ABOUT ME</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link active">PROJECTS</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT ME</a></li>
+            </ul>
+        </div>
+        <div class="projects-section">
             <div class="projects-content">
                 <div class="main-content">
                     <div class="title-section">
@@ -31,9 +38,9 @@
                     </div>
 
                     <div class="projects-grid">
-                        <a href="https://github.com/LDLNAN/portfolio" target="_blank" class="project-card">
+                        <a href="https://github.com/LDLNAN/portfolio" target="_blank" rel="noopener noreferrer" class="project-card">
                             <div class="project-image">
-                                <img src="../assets/images/lucas_cutie.jpg" alt="Project 1" />
+                                <img src="../assets/images/lucas_cutie.jpg" alt="Portfolio Website" loading="lazy" decoding="async" width="800" height="600" />
                             </div>
                             <div class="project-info">
                                 <h3 class="project-title">Portfolio Website</h3>
@@ -46,10 +53,10 @@
                             </div>
                         </a>
 
-                        <a href="https://github.com/LDLNAN/Patient-Health-Management-System" target="_blank"
+                        <a href="https://github.com/LDLNAN/Patient-Health-Management-System" target="_blank" rel="noopener noreferrer"
                             class="project-card">
                             <div class="project-image">
-                                <img src="../assets/images/patient_management.png" alt="Project 2" />
+                                <img src="../assets/images/patient_management.png" alt="Patient Health Management System" loading="lazy" decoding="async" width="800" height="600" />
                             </div>
                             <div class="project-info">
                                 <h3 class="project-title">Patient Health Management System</h3>
@@ -62,11 +69,11 @@
                             </div>
                         </a>
 
-                        <a href="https://apps.apple.com/nz/app/uiui-te-reo-quiz/id1642623327" target="_blank"
+                        <a href="https://apps.apple.com/nz/app/uiui-te-reo-quiz/id1642623327" target="_blank" rel="noopener noreferrer"
                             class="project-card">
                             <div class="project-image">
                                 <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d7/2e/99/d72e99e3-bcd4-a4da-d5c8-36fa3c84d91e/AppIcon-0-1x_U007emarketing-0-11-0-85-220-0.png/230x0w.webp"
-                                    alt="Project 3" />
+                                    alt="uiui app" loading="lazy" decoding="async" width="230" height="230" />
                             </div>
                             <div class="project-info">
                                 <h3 class="project-title">uiui</h3>
@@ -81,8 +88,10 @@
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </div>
+
+    <script src="../scripts/nav.js"></script>
 </body>
 
 </html>

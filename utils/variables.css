@@ -1,41 +1,47 @@
 :root {
-    /* accent colors */
-    --color-accent-red: #FF3333;
-    --color-accent-red-dark: #990000;
-    --color-accent-purple: #9933FF;
-    --color-accent-purple-dark: #4D0099;
-    --color-accent-green: #33FF33;
-    --color-accent-green-dark: #009900;
-    --color-accent-blue: #3366FF;
-    --color-accent-blue-dark: #002099;
-
     /* theme colors */
-    --color-dark-bg: #000000;
-    --color-medium-bg: #dddddd;
-    --color-dark-surface: #0f0f0f;
-    --color-dark-text: #ffffff;
+    --color-dark-bg: #131313;
+    --color-dark-text: #ececec;
     --color-dark-text-secondary: rgba(255, 255, 255, 0.8);
     --color-dark-text-primary: rgba(255, 255, 255, 0.9);
+    --color-dark-transparent-bg: rgba(19, 19, 19, 0.8);
 
     --color-light-bg: #ffffff;
-    --color-light-surface: rgba(246, 246, 246, 0.7);
-    --color-light-border-panel: rgba(202, 202, 202, 0.7);
-    --color-light-border-button: rgba(193, 193, 193, 0.7);
-    --color-light-button-bg: rgba(244, 244, 244, 1.0);
     --color-light-text: #000000;
-    --color-light-transparent-bg: rgba(255, 255, 255, 0.2);
+    --color-light-transparent-bg: rgba(255, 255, 255, 0.5);
 
     --color-medium-text: #747474;
-
     --color-text-white: #ffffff;
-    --color-primary: #ffffff;
+
+    /* card styles */
+    --card-bg-light: rgba(246, 246, 246, 0.3);
+    --card-bg-dark: rgba(56, 56, 56, 0.3);
+    --card-border-light: rgba(202, 202, 202, 0.7);
+    --card-border-dark: rgba(255, 255, 255, 0.3);
+    --card-padding-default: 20px;
+    --card-border-radius-default: 15px;
+
+    /* panel styles (for larger containers) */
+    --size-panel-width-default: 525px;
+    --size-panel-height-default: 135px;
+
+    /* button styles */
+    --button-bg-light: rgba(244, 244, 244, 1.0);
+    --button-bg-dark: rgba(30, 30, 30, 0.7);
+    --button-border-light: rgba(193, 193, 193, 0.7);
+    --button-border-dark: rgba(255, 255, 255, 0.2);
+    --button-padding-default: 20px;
+    --button-border-radius-default: 10px;
+
+    /* navbar colors */
+    --color-glass-navbar: rgba(255, 255, 255, 0.9);
+    --color-glass-navbar-dark: rgba(0, 0, 0, 0.9);
 
     /* fonts and text */
     --font-primary: "Bebas Neue", sans-serif;
     --font-secondary: "Maven Pro", sans-serif;
 
-    --text-size-hero: 148px;
-    --text-size-xl: 72px;
+    --text-size-subtitle: 24px;
     --text-size-lg: 64px;
     --text-size-nav: 26px;
     --text-size-md: 24px;
@@ -45,7 +51,6 @@
     --text-size-xs: 14px;
     --text-size-xxs: 13px;
 
-    --line-height-hero: 112px;
     --font-weight-subtitle: 700;
     --letter-spacing-title: 2px;
 
@@ -60,41 +65,26 @@
     --space-word-clamp-max: 0px;
 
     /* rounded corners */
-    --radius-panel: 35px;
-    --radius-button: 25px;
+    --radius-panel: 15px;
+    --radius-button: 10px;
     --radius-button-small: 15px;
 
-    /* breakpoints */
-        --breakpoint-small: 900px;
-        --breakpoint-mobile: 899px;
-    --breakpoint-medium: 1600px;
-    --min-screen-width: 320px;
-    --min-screen-height: 568px;
-
-
-    /* nav bar stuff */
-
-    --nav-height: 60px;
-    --size-nav-height: 60px;
+    /* nav bar */
+    --size-nav-height: 25px;
     --size-nav-button-min: 80px;
     --size-nav-position-right: 80px;
-    --size-nav: 26px;
 
-
-    /* the cards */
-
-    --card-size: 300px;
+    /* cards */
     --size-card-square: 300px;
 
 
     /* social buttons */
-
     --size-social-button: 100px;
-    --size-social-button-small: 85px;
     --size-social-button-contact: 140px;
     --size-social-button-contact-height: 50px;
     --size-social-icon-contact: 28px;
     --size-social-panel-width: 521px;
+    --size-social-panel-height: 112px;
     --size-social-button-width: 102px;
     --size-social-button-height: 101px;
     --size-icon: 50px;
@@ -104,61 +94,59 @@
 
 
     /* page layout */
-
-    /* container sizes */
-        /* removed unused --size-container-max */
     --size-container-contact-max: 2000px;
     --size-content-max-width: 650px;
     --size-content-min-width: 400px;
     --size-paragraph-max-width: 500px;
     --size-profile-image: 700px;
-    --size-subtitle-width: 324px;
+    --size-subtitle-width: 400px;
 
-    /* layout stuff */
+    /* layout spacing */
     --layout-mobile-padding-top: 120px;
     --layout-content-height-standard: 120px;
-    --layout-aboutme-paragraph-height: 322px;
 
-    /* shared styles */
+    /* subtitle styles */
     --subtitle-font-family: var(--font-secondary);
     --subtitle-font-size: var(--text-size-md);
     --subtitle-font-weight: var(--font-weight-subtitle);
     --subtitle-line-height: 1.4;
     --subtitle-margin: -10px 0 var(--space-md) 0;
 
-    /* glass and transparency */
-    --color-glass-card: rgba(255, 255, 255, 0.1);
-    --color-glass-navbar: rgba(255, 255, 255, 0.3);
-    --color-glass-navbar-dark: rgba(0, 0, 0, 0.7);
-    --color-glass-bg: rgba(255, 255, 255, 0.1);
-    --color-glass-border: rgba(255, 255, 255, 0.2);
-    --color-card-bg: rgba(255, 255, 255, 0.05);
-
     /* shadows */
-    --shadow-main: 0 10px 30px rgba(0, 0, 0, 0.2);
-    --shadow-subtle: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --shadow-small: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 8px 10px rgba(0, 0, 0, 0.15);
+    --shadow-large: 0 12px 15px rgba(0, 0, 0, 0.2);
+
+    /* glass/blur effects */
+    --blur-standard: 20px;
+    --blur-light: 10px;
+    --blur-menu: 8px;
+
+    /* z-index layers */
+    --z-back: 1;
+    --z-middle: 1000;
+    --z-front-middle: 1600;
+    --z-front: 1700;
+
+    /* transitions */
+    --transition-quick: 100ms ease-in-out;
+    --transition-fast: 150ms ease-in-out;
+    --transition-medium: 300ms ease-in-out;
+    --transition-menu: 320ms cubic-bezier(.2,.9,.2,1);
+    --transition-hero: 2000ms cubic-bezier(.2,.9,.2,1);
+
+    /* mobile nav */
+    --nav-toggle-padding: 12px;
+    --nav-toggle-icon-width: 26px;
+    --nav-toggle-icon-height: 18px;
+    --nav-toggle-radius: 8px;
+    --mobile-menu-padding-top: 70px;
 
     /* gradients */
-    --gradient-red-horizontal: linear-gradient(to right, #FF3333, #990000);
     --gradient-red-vertical: linear-gradient(to bottom, #FF3333, #990000);
-    --gradient-purple-horizontal: linear-gradient(to right, #9933FF, #4D0099);
-    --gradient-purple-vertical: linear-gradient(to bottom, #9933FF, #4D0099);
-    --gradient-green-horizontal: linear-gradient(to right, #33FF33, #009900);
-    --gradient-green-vertical: linear-gradient(to bottom, #33FF33, #009900);
-    --gradient-blue-horizontal: linear-gradient(to right, #3366FF, #002099);
-    --gradient-blue-vertical: linear-gradient(to bottom, #3366FF, #002099);
     --gradient-purple-blue-horizontal: linear-gradient(to right, #9933FF, #3366FF);
-
-    --gradient-card-border: linear-gradient(135deg,
-            rgba(255, 255, 255, 0.25) 0%,
-            rgba(255, 255, 255, 0.07) 50%,
-            rgba(255, 255, 255, 0.25) 100%);
-
-    --gradient-glass-border-dark: linear-gradient(135deg,
-            rgba(255, 255, 255, 0.25) 0%,
-            rgba(255, 255, 255, 0.07) 50%,
-            rgba(255, 255, 255, 0.25) 100%);
-
+    --gradient-green-horizontal: linear-gradient(to right, #33FF33, #009900);
+    
     --gradient-glass-border-light: linear-gradient(135deg,
             #f0f0f0 0%,
             #e0e0e0 50%,
