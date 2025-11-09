@@ -24,12 +24,14 @@ body:has(.contact-main) {
     max-width: var(--size-container-contact-max);
 }
 
+/* ----- navigation styles ----- */
+
 .contact-main .nav-link {
     color: black;
 }
 
 .contact-main .nav-link:hover {
-    color: #747474;
+    color: rgb(116, 116, 116);
 }
 
 .contact-main .nav-link.active {
@@ -64,6 +66,8 @@ body:has(.contact-main) {
     }
 }
 
+/* ----- page specific styles ----- */
+
 .contact-content {
     display: flex;
     justify-content: center;
@@ -73,36 +77,8 @@ body:has(.contact-main) {
     gap: var(--space-xl);
 }
 
-/* mobile stuff */
-@media (max-width: 899px) {
-    .title-section {
-        text-align: center;
-    }
-
-    .contact-content {
-        flex-direction: column;
-        align-items: center;
-        gap: var(--space-lg);
-        padding: var(--layout-mobile-padding-top) var(--space-md) var(--space-lg) var(--space-md);
-    }
-
-    .main-content {
-        max-width: 100%;
-        min-width: auto;
-        align-items: center;
-    }
-}
-
 .title-section {
     text-align: center;
-    flex-shrink: 0;
-}
-
-.main-content {
-    display: flex;
-    flex-direction: column;
-    max-width: 1000px;
-    margin: 0 auto;
 }
 
 .contact-title {
@@ -124,4 +100,221 @@ body:has(.contact-main) {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.guestbook-section {
+    margin-top: var(--space-lg);
+    text-align: center;
+}
+
+.auth-section {
+    margin-bottom: var(--space-lg);
+    padding: var(--space-md);
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.login-message {
+    font-family: var(--font-secondary);
+    color: var(--color-light-text);
+    font-size: var(--text-size-base);
+    margin: 0 0 var(--space-sm) 0;
+}
+
+.google-login-btn {
+    background-color: rgb(76, 175, 80);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: var(--space-xs) var(--space-sm);
+    font-family: var(--font-secondary);
+    font-size: var(--text-size-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.google-login-btn:hover {
+    background-color: rgb(69, 160, 73);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.user-info {
+    margin-bottom: var(--space-lg);
+    padding: var(--space-md);
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.user-info-message {
+    font-family: var(--font-secondary);
+    color: var(--color-light-text);
+    font-size: var(--text-size-base);
+    margin: 0 0 var(--space-sm) 0;
+}
+
+.logout-btn {
+    background-color: rgb(220, 53, 69);
+    color: white;
+    border: none;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 4px;
+    font-family: var(--font-secondary);
+    font-size: var(--text-size-sm);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: rgb(200, 35, 51);
+}
+
+.guestbook-form {
+    max-width: 500px;
+    margin: 0 auto var(--space-xl) auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: var(--space-md);
+}
+
+.form-group label {
+    display: block;
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    color: var(--color-light-text);
+    margin-bottom: var(--space-xs);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: var(--space-sm);
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    font-family: var(--font-secondary);
+    font-size: var(--text-size-base);
+    resize: none;
+}
+
+.submit-btn {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: 5px;
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+
+.submit-btn:hover {
+    background-color: rgb(51, 51, 51);
+}
+
+.guestbook-entries-title {
+    font-family: var(--subtitle-font-family);
+    font-size: var(--subtitle-font-size);
+    font-weight: var(--subtitle-font-weight);
+    line-height: var(--subtitle-line-height);
+    color: var(--color-light-text);
+    margin: var(--subtitle-margin);
+}
+
+.entries-panel {
+    margin-bottom: var(--space-lg);
+    padding: var(--space-md);
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.entries-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.guest-entry {
+    background-color: rgba(255, 255, 255, 0.952);
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 6px;
+    padding: var(--space-md);
+    text-align: left;
+}
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-xs);
+}
+
+.entry-left {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.entry-name {
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    color: var(--color-light-text);
+    font-size: var(--text-size-sm);
+}
+
+.entry-actions {
+    display: flex;
+    gap: var(--space-xs);
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 2px var(--space-xs);
+    border: none;
+    border-radius: 3px;
+    font-family: var(--font-secondary);
+    font-size: var(--text-size-xs);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-btn {
+    background-color: rgb(0, 123, 255);
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: rgb(0, 86, 179);
+}
+
+.delete-btn {
+    background-color: rgb(220, 53, 69);
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: rgb(200, 35, 51);
+}
+
+.entry-date {
+    font-family: var(--font-secondary);
+    color: var(--color-medium-text);
+    font-size: var(--text-size-xs);
+}
+
+.entry-message {
+    font-family: var(--font-secondary);
+    color: var(--color-light-text);
+    font-size: var(--text-size-base);
+    line-height: 1.5;
+    margin: 0;
 }

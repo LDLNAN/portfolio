@@ -1,17 +1,17 @@
 :root {
     /* theme colors */
-    --color-dark-bg: #131313;
-    --color-dark-text: #ececec;
+    --color-dark-bg: rgb(19, 19, 19);
+    --color-dark-text: rgb(236, 236, 236);
     --color-dark-text-secondary: rgba(255, 255, 255, 0.8);
     --color-dark-text-primary: rgba(255, 255, 255, 0.9);
     --color-dark-transparent-bg: rgba(19, 19, 19, 0.8);
 
-    --color-light-bg: #ffffff;
-    --color-light-text: #000000;
+    --color-light-bg: rgb(255, 255, 255);
+    --color-light-text: rgb(0, 0, 0);
     --color-light-transparent-bg: rgba(255, 255, 255, 0.5);
 
-    --color-medium-text: #747474;
-    --color-text-white: #ffffff;
+    --color-medium-text: rgb(116, 116, 116);
+    --color-text-white: rgb(255, 255, 255);
 
     /* card styles */
     --card-bg-light: rgba(246, 246, 246, 0.3);
@@ -143,12 +143,12 @@
     --mobile-menu-padding-top: 70px;
 
     /* gradients */
-    --gradient-red-vertical: linear-gradient(to bottom, #FF3333, #990000);
-    --gradient-purple-blue-horizontal: linear-gradient(to right, #9933FF, #3366FF);
-    --gradient-green-horizontal: linear-gradient(to right, #33FF33, #009900);
+    --gradient-red-vertical: linear-gradient(to bottom, rgb(255, 51, 51), rgb(153, 0, 0));
+    --gradient-purple-blue-horizontal: linear-gradient(to right, rgb(153, 51, 255), rgb(51, 102, 255));
+    --gradient-green-horizontal: linear-gradient(to right, rgb(51, 255, 51), rgb(0, 153, 0));
     
     --gradient-glass-border-light: linear-gradient(135deg,
-            #f0f0f0 0%,
-            #e0e0e0 50%,
-            #f0f0f0 100%);
+            rgb(240, 240, 240) 0%,
+            rgb(224, 224, 224) 50%,
+            rgb(240, 240, 240) 100%);
 }

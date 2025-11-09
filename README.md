@@ -47,4 +47,9 @@ _TL:DR: Hero page animations, use JS for this stuff later. Clean TF up you dirty
 - Major cleanup (renaming things, shift things, redo things - proper mixed bag)
 - Moved to more hard coded values, change this back later -> just for experimentation.
 - Things are a bit messy, but gotta move on.
+
+#### _(Commit)_
+- Swap to RGB values for colours consistently
+- Created guestbook form
+- Removed some media query entries where not needed
 ---

@@ -23,34 +23,36 @@ body:has(.projects-main) {
     max-width: 2000px;
 }
 
+/* ===== NAVIGATION STYLES ===== */
+
 .projects-main .nav-link {
-    color: #ececec;
+    color: rgb(236, 236, 236);
 }
 
 .projects-main .nav-link:hover {
-    color: #747474;
+    color: rgb(116, 116, 116);
 }
 
 .projects-main .nav-link.active {
-    background: #ececec !important;
-    color: #131313 !important;
+    background: rgb(236, 236, 236) !important;
+    color: rgb(19, 19, 19) !important;
 }
 
 .projects-main .hamburger-svg {
-    color: #ececec;
+    color: rgb(236, 236, 236);
     filter: invert(1);
 }
 
 .projects-main .nav-menu {
-    background: #131313;
+    background: rgb(19, 19, 19);
 }
 
 .projects-main .nav-menu .nav-link {
-    color: #ececec;
+    color: rgb(236, 236, 236);
 }
 
 .projects-main .nav-toggle-btn {
-    background-color: #131313;
+    background-color: rgb(19, 19, 19);
     border-color: transparent;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -72,10 +74,12 @@ body:has(.projects-main) {
     }
 
     .projects-main .nav-menu .nav-link.active {
-        background: #ececec;
-        color: #131313;
+        background: rgb(236, 236, 236);
+        color: rgb(19, 19, 19);
     }
 }
+
+/* ===== PAGE SPECIFIC STYLES ===== */
 
 .projects-content {
     display: flex;
@@ -129,10 +133,10 @@ body:has(.projects-main) {
 }
 
 .projects-content .project-card {
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(255, 255, 255, 0.034);
     border-radius: 15px;
     padding: 0;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--card-border-dark);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     box-shadow: 0 12px 15px rgba(0, 0, 0, 0.2);
@@ -172,14 +176,14 @@ body:has(.projects-main) {
 .project-title {
     font-family: "Maven Pro", sans-serif;
     font-weight: 700;
-    color: #ececec;
+    color: var(--color-dark-text);
     font-size: 24px;
     margin: 0 0 10px 0;
 }
 
 .project-description {
     font-family: "Maven Pro", sans-serif;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--color-dark-text-secondary);
     font-size: 18px;
     line-height: 1.5;
     margin: 0 0 20px 0;

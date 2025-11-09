@@ -5,7 +5,7 @@ html, body {
 
 .portfolio-main {
     height: 100vh;
-    background-color: #ffffff;
+    background-color: rgb(255, 255, 255);
 }
 
 .hero-title-wrapper {
@@ -17,7 +17,7 @@ html, body {
 
 .hero-title {
     font-family: "Bebas Neue", sans-serif;
-    color: #ececec;
+    color: rgb(236, 236, 236);
     font-size: 148px;
     letter-spacing: -0.02em;
     line-height: 112px;
@@ -30,7 +30,7 @@ html, body {
     margin: -5px 0 0 4px;
     font-family: "Maven Pro", sans-serif;
     font-weight: 700;
-    color: #ececec;
+    color: rgb(236, 236, 236);
     font-size: 24px;
     animation: slide-in-from-right-hero 1300ms cubic-bezier(.4,.9,.2,1) 1300ms both;
 }
@@ -59,6 +59,8 @@ html, body {
     left: 10px;
     z-index: 10;
 }
+
+/* ----- navigation styles ----- */
 
 .nav-toggle-btn {
     display: flex;
@@ -204,6 +206,8 @@ html, body {
         height: 75px;
     }
 }
+
+/* ----- page specific styles ----- */
 
 .social-panel {
     position: absolute;

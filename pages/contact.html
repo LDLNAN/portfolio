@@ -32,8 +32,81 @@
             <div class="contact-content">
                 <div class="main-content">
                     <div class="title-section">
-                        <h1 class="contact-title">Contact Me</h1>
-                        <p class="contact-subtitle">Please, I'm so lonely.</p>
+                        <h1 class="contact-title">Guestbook</h1>
+                        <p class="contact-subtitle">Leave a message!</p>
+                    </div>
+
+                    <div class="guestbook-section">
+                        <div id="auth-section" class="auth-section">
+                            <p class="login-message">Please login to sign guestbook</p>
+                            <button id="login-btn" class="google-login-btn" onclick="toggleLogin()">
+                                Sign in with Google
+                            </button>
+                        </div>
+
+                        <div id="user-info" class="user-info" style="display: none;">
+                            <p class="user-info-message">Welcome, <span id="user-name">User</span>!</p>
+                            <button class="logout-btn" onclick="toggleLogin()">Logout</button>
+                        </div>
+                        
+                        <form class="guestbook-form">
+                            <div class="form-group">
+                                <label for="guest-name">Name:</label>
+                                <input type="text" id="guest-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="guest-message">Message:</label>
+                                <textarea id="guest-message" name="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Sign Guestbook</button>
+                        </form>
+
+                        <div class="guestbook-entries">
+                            <h3 class="guestbook-entries-title">Recent Messages</h3>
+                            <div class="entries-panel">
+                                <div class="entries-container">
+                                    <div class="guest-entry">
+                                        <div class="entry-header">
+                                            <div class="entry-left">
+                                                <span class="entry-name">Cool_Decider09</span>
+                                                <div class="entry-actions">
+                                                    <button class="edit-btn">Edit</button>
+                                                    <button class="delete-btn">Delete</button>
+                                                </div>
+                                            </div>
+                                            <span class="entry-date">2025-11-08</span>
+                                        </div>
+                                        <p class="entry-message">You're so cool Lucas!</p>
+                                    </div>
+                                    <div class="guest-entry">
+                                        <div class="entry-header">
+                                            <div class="entry-left">
+                                                <span class="entry-name">Chris Criteria</span>
+                                                <div class="entry-actions">
+                                                    <button class="edit-btn">Edit</button>
+                                                    <button class="delete-btn">Delete</button>
+                                                </div>
+                                            </div>
+                                            <span class="entry-date">2025-11-07</span>
+                                        </div>
+                                        <p class="entry-message">Well met!</p>
+                                    </div>
+                                    <div class="guest-entry">
+                                        <div class="entry-header">
+                                            <div class="entry-left">
+                                                <span class="entry-name">Person Pat</span>
+                                                <div class="entry-actions">
+                                                    <button class="edit-btn">Edit</button>
+                                                    <button class="delete-btn">Delete</button>
+                                                </div>
+                                            </div>
+                                            <span class="entry-date">2025-11-06</span>
+                                        </div>
+                                        <p class="entry-message">Professional.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
