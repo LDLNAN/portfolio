@@ -17,7 +17,7 @@
 <body>
     <div class="contact-main">
         <div class="main-navigation">
-            <button class="nav-toggle-btn" onclick="toggleMenu()">
+            <button class="nav-toggle-btn">
                 <img class="hamburger-svg" src="../assets/images/hamburger-menu-svgrepo-com.svg" alt="Menu" width="32" height="32" />
             </button>
 
@@ -39,21 +39,17 @@
                     <div class="guestbook-section">
                         <div id="auth-section" class="auth-section">
                             <p class="login-message">Please login to sign guestbook</p>
-                            <button id="login-btn" class="google-login-btn" onclick="toggleLogin()">
+                            <button id="login-btn" class="google-login-btn">
                                 Sign in with Google
                             </button>
                         </div>
 
                         <div id="user-info" class="user-info" style="display: none;">
                             <p class="user-info-message">Welcome, <span id="user-name">User</span>!</p>
-                            <button class="logout-btn" onclick="toggleLogin()">Logout</button>
+                            <button class="logout-btn">Logout</button>
                         </div>
                         
                         <form class="guestbook-form">
-                            <div class="form-group">
-                                <label for="guest-name">Name:</label>
-                                <input type="text" id="guest-name" name="name" required>
-                            </div>
                             <div class="form-group">
                                 <label for="guest-message">Message:</label>
                                 <textarea id="guest-message" name="message" rows="4" required></textarea>
@@ -112,8 +108,7 @@
             </div>
         </div>
     </div>
-
-    <script src="../scripts/nav.js"></script>
+    <script type="module" src="../scripts/nav.js"></script> <!-- needed or dies -->
     <script type="module" src="../scripts/comments.js"></script>
 </body>
 

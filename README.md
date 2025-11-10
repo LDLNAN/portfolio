@@ -66,4 +66,11 @@ Each step is a commit
 
 #### _Step 4_ comments.js (cont.)
 - Can now write, needs auth verification and other CRUD stuff
+
+## **Authentication**
+
+#### _Step 1_ 
+- Implemented Google sign-in with Firebase Auth (signInWithPopup, signOut, onAuthStateChanged)
+- Removed name input field, now using user.displayName from auth.currentUser
+- Store user.uid as ownerId for edit/delete permissions
 ---

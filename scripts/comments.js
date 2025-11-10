@@ -2,7 +2,7 @@
 // https://www.smashingmagazine.com/2020/08/comment-system-firebase/
 // https://firebase.google.com/docs/firestore/manage-data/add-data
 // 
-import { db } from '../firebase.js'
+import { db, auth } from '../firebase.js'
 import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js'
 
 function loadComments() {
@@ -12,7 +12,7 @@ function loadComments() {
         collection(db, 'guestbook'),
         orderBy('createdAt', 'desc')
     )
-    
+
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
         // clear premade entries
         entriesContainer.innerHTML = ''
@@ -65,21 +65,24 @@ function createGuestbookElement(guestbookEntry) {
 async function handleFormSubmission(event) {
     event.preventDefault()
     
-    const nameInput = document.getElementById('guest-name')
     const messageInput = document.getElementById('guest-message')
+    const user = auth.currentUser
+    if (!user) {
+        alert('Sign in to post a message!')
+        return
+    }
     
     const entryData = {
-        name: nameInput.value,
+        name: user.displayName,
         message: messageInput.value,
         createdAt: serverTimestamp(),
-        ownerId: 'anonymous' // placeholder until we implement real auth
+        ownerId: user.uid
     }
     
     const docRef = await addDoc(collection(db, 'guestbook'), entryData)
     console.log("Document written with ID: ", docRef.id)
     
     // clear form after submit
-    nameInput.value = ''
     messageInput.value = ''
 }
 
