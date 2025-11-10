@@ -52,4 +52,15 @@ _TL:DR: Hero page animations, use JS for this stuff later. Clean TF up you dirty
 - Swap to RGB values for colours consistently
 - Created guestbook form
 - Removed some media query entries where not needed
+
+## **Actual Implementation Steps**
+Each step is a commit
+
+#### _Step 1_ firebase.js
+- Tutorial doesn't include DOM, had to make some adjustments
+    - getElementById what-not instead of what they did
+
+#### _Step 2 & 3_ comments.js
+- Works! Comments display from Firabase DB
+- Had to fix firebase.js, old reference
 ---
