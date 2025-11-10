@@ -63,4 +63,7 @@ Each step is a commit
 #### _Step 2 & 3_ comments.js
 - Works! Comments display from Firabase DB
 - Had to fix firebase.js, old reference
+
+#### _Step 4_ comments.js (cont.)
+- Can now write, needs auth verification and other CRUD stuff
 ---
