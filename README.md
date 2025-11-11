@@ -75,6 +75,10 @@ Each step is a commit
 - Store user.uid as ownerId for edit/delete permissions
 
 #### _Step 2_
-- Draw edit/delete based on if current user matches the comments owner id
+- Draw edit/delete buttons based on if current user matches the comments owner id
 - Stop allowing guestbook signing if not authenticated
+
+#### _Step 3_ 
+- Actual editing enabled through prompts
+- Follows firebase rules, can only edit or delete a comment if your id matches the comments ownerID.
 ---

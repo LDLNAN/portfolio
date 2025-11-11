@@ -1,9 +1,10 @@
 // https://firebase.google.com/docs/firestore/query-data/listen
 // https://www.smashingmagazine.com/2020/08/comment-system-firebase/
 // https://firebase.google.com/docs/firestore/manage-data/add-data
+// https://firebase.google.com/docs/firestore/manage-data/delete-data
 // 
 import { db, auth } from '../firebase.js'
-import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js'
+import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, doc, deleteDoc, updateDoc } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js'
 
 function loadComments() {
     const entriesContainer = document.getElementById('entries-container')
@@ -12,7 +13,7 @@ function loadComments() {
         collection(db, 'guestbook'),
         orderBy('createdAt', 'desc')
     )
-    
+
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
         // clear premade entries
         entriesContainer.innerHTML = ''
@@ -69,6 +70,15 @@ function createGuestbookElement(guestbookEntry) {
         <p class="entry-message">${guestbookEntry.message}</p>
     `
     
+    // add event listeners to buttons if owner, extra protect.
+    if (isOwner) {
+        const editBtn = entryDiv.querySelector('.edit-btn')
+        const deleteBtn = entryDiv.querySelector('.delete-btn')
+        
+        editBtn.addEventListener('click', () => handleEdit(guestbookEntry.id, guestbookEntry.message))
+        deleteBtn.addEventListener('click', () => handleDelete(guestbookEntry.id))
+    }
+    
     return entryDiv
 }
 async function handleFormSubmission(event) {
@@ -93,6 +103,27 @@ async function handleFormSubmission(event) {
     
     // clear form after submit
     messageInput.value = ''
+}
+
+async function handleDelete(docId) {
+    if (!confirm('Delete this message?')) {
+        return
+    }
+    
+    await deleteDoc(doc(db, 'guestbook', docId))
+}
+
+async function handleEdit(docId, currentMessage) {
+    const newMessage = prompt('Edit your message:', currentMessage)
+    
+    if (newMessage === null) {
+        return
+    }
+    
+    const docRef = doc(db, 'guestbook', docId)
+    await updateDoc(docRef, {
+        message: newMessage
+    })
 }
 
 // store unsubscribe to be called on page unload
