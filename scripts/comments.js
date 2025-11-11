@@ -12,7 +12,7 @@ function loadComments() {
         collection(db, 'guestbook'),
         orderBy('createdAt', 'desc')
     )
-
+    
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
         // clear premade entries
         entriesContainer.innerHTML = ''
@@ -45,15 +45,24 @@ function createGuestbookElement(guestbookEntry) {
         dateStr = isoString.split('T')[0]  // first index is date part
     }
     
+    // check if current user owns this
+    const currentUser = auth.currentUser
+    const isOwner = currentUser && currentUser.uid === guestbookEntry.ownerId
+    
+    // if is owner true, show edit/delete buttons, else ''
+    const actionButtons = isOwner ? `
+        <div class="entry-actions">
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+        </div>
+    ` : ''
+    
     // guestbook entry HTML
     entryDiv.innerHTML = `
         <div class="entry-header">
             <div class="entry-left">
                 <span class="entry-name">${guestbookEntry.name}</span>
-                <div class="entry-actions">
-                    <button class="edit-btn">Edit</button>
-                    <button class="delete-btn">Delete</button>
-                </div>
+                ${actionButtons}
             </div>
             <span class="entry-date">${dateStr}</span>
         </div>

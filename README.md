@@ -73,4 +73,8 @@ Each step is a commit
 - Implemented Google sign-in with Firebase Auth (signInWithPopup, signOut, onAuthStateChanged)
 - Removed name input field, now using user.displayName from auth.currentUser
 - Store user.uid as ownerId for edit/delete permissions
+
+#### _Step 2_
+- Draw edit/delete based on if current user matches the comments owner id
+- Stop allowing guestbook signing if not authenticated
 ---
