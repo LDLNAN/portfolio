@@ -43,6 +43,11 @@ onAuthStateChanged(auth, (user) => {
     const userInfo = document.getElementById("user-info")
     const userName = document.getElementById("user-name")
     
+    // prevents error, this stuff not needed on every page
+    if (!authSection || !userInfo || !userName) {
+        return
+    }
+    
     if (user) { // if signed in
         authSection.style.display = "none"
         userInfo.style.display = "block"
